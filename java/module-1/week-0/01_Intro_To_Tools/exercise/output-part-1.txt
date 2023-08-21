@@ -1,0 +1,37 @@
+
+---- VERIFYING PART 1 ---- 
+
+✅ 1. /c/Users/Student/playground exists
+✅ 2. /c/Users/Student/playground/usa exists
+✅ 3. /c/Users/Student/playground/canada exists
+✅ 4. /c/Users/Student/playground/usa/ohio exists
+✅ 5. /c/Users/Student/playground/usa/pennsylvania exists
+✅ 6. /c/Users/Student/playground/usa/michigan exists
+✅ 7. /c/Users/Student/playground/canada/quebec exists
+✅ 8. /c/Users/Student/playground/canada/british-columbia exists
+✅ 9. /c/Users/Student/playground/usa/ohio/cuyahoga exists
+✅ 10. /c/Users/Student/playground/usa/ohio/hamilton exists
+✅ 11. /c/Users/Student/playground/usa/ohio/franklin exists
+✅ 12. /c/Users/Student/playground/usa/pennsylvania/allegheny exists
+✅ 13. /c/Users/Student/playground/usa/michigan/wayne exists
+❗️ 14. /c/Users/Student/playground/usa/ohio/cuyahoga/cleveland.txt does not exist
+✅ 15. /c/Users/Student/playground/usa/ohio/hamilton/cincinnati.txt exists
+✅ 16. /c/Users/Student/playground/usa/ohio/franklin/columbus.txt exists
+✅ 17. /c/Users/Student/playground/usa/pennsylvania/allegheny/pittsburgh.txt exists
+✅ 18. /c/Users/Student/playground/usa/michigan/wayne/detroit.txt exists
+✅ 19. /c/Users/Student/playground/canada/quebec/montreal.txt exists
+✅ 20. /c/Users/Student/playground/canada/quebec/quebec-city.txt exists
+✅ 21. /c/Users/Student/playground/canada/british-columbia/vancouver.txt exists
+✅ 22. /c/Users/Student/playground/canada/british-columbia/prince-george.txt exists
+
+Total tests: 22
+Tests passed: 21
+Errors: 1
+
+ You still need to make a few more changes.
+ If you are having difficulty troubleshooting, try the following:
+ - Use 'pwd' to print out your current working directory.
+ - Check for typos in the names of folders or file paths.
+ - When changing directories, '..' means up one directory. '.' means the current directory.
+ - Reference Finder (Mac) or Explorer (PC) to make sure everything is in the correct location.
+
