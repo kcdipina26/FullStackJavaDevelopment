@@ -35,42 +35,73 @@ public class Exercises {
         /* Exercise 4
         4. There are 5 flowers and 3 bees. How many less bees than flowers?
         */
+		int cuteFlowers = 5;
+		int littleBees = 3;
+		int beeAndflowers = cuteFlowers - littleBees;
+
+
 
 
         /* Exercise 5
         5. 1 lonely pigeon was eating breadcrumbs. Another pigeon came to eat
         breadcrumbs, too. How many pigeons are eating breadcrumbs now?
         */
+		int lonelyPigeon = 1;
+		int anotherOne = 1;
+		int pigeonsEating = lonelyPigeon + anotherOne;
+
+
 
 
         /* Exercise 6
         6. 3 owls were sitting on the fence. 2 more owls joined them. How many
         owls are on the fence now?
         */
+		int sittingOwls = 3;
+		int joiningOwls = 2;
+		int fencingOwls = sittingOwls + joiningOwls;
+
 
 
         /* Exercise 7
         7. 2 beavers were working on their home. 1 went for a swim. How many
         beavers are still working on their home?
         */
+		int twoBeavers = 2;
+		int swimBeavers = 1;
+		int remainingBeavers = twoBeavers - swimBeavers;
+
 
 
         /* Exercise 8
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
         many toucans in all?
         */
+		int twoToucans = 2;
+		int joiningToucans = 1;
+		int totalToucans = twoToucans + joiningToucans;
+
 
 
         /* Exercise 9
         9. There are 4 squirrels in a tree with 2 nuts. How many more squirrels
         are there than nuts?
         */
+		int squirrelsTree = 4;
+		int suirrelsNuts = 2;
+		int squirrelsVsnuts = squirrelsTree - suirrelsNuts;
+
 
 
         /* Exercise 10
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
         */
+		double foundQuater = 0.4;
+		double foundDime = 0.10;
+		double foundNickels = 2 * 0.20;
+		double TotalMoney = foundQuater + foundDime + foundNickels;
+
 
 
         /* Exercise 11
@@ -79,12 +110,21 @@ public class Exercises {
         Mrs. Flannery's class bakes 17 muffins. How many muffins does first
         grade bake in all?
         */
+		int brierClass = 18;
+		int macadamClass = 20;
+		int flanneryClass = 17;
+		int totalMuffins = brierClass + macadamClass + flanneryClass;
+
 
 
         /* Exercise 12
         12. Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How
         much did she spend in all for the two toys?
         */
+		double boughtYoyocents = 0.24;
+		double boughtWhistlecents = 0.14;
+		double  spendTotaltwo = boughtWhistlecents + boughtWhistlecents;
+
 
 
         /* Exercise 13
@@ -92,6 +132,12 @@ public class Exercises {
         and 10 mini marshmallows.How many marshmallows did she use
         altogether?
         */
+		int riceKrispies = 5;
+		int largeMarshmallows = 8;
+		int miniMarshmallows = 10;
+		int overallMarshmallows = largeMarshmallows + miniMarshmallows;
+
+
 
 
         /* Exercise 14
@@ -99,9 +145,13 @@ public class Exercises {
         Elementary School received 17 inches of snow. How much more snow
         did Mrs. Hilt's house have?
         */
+		int houseHiltsnow = 29;
+		int brecknockElementarysnow = 17;
+		int snowDifference = houseHiltsnow - brecknockElementarysnow;
 
 
         /* Exercise 15
+
         15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2.50 on a pencil
         case. How much money does she have left?
         */
@@ -111,35 +161,61 @@ public class Exercises {
         16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
         marbles does he have now?
         */
+		int joshCollection = 16;
+		int joshLost = 7;
+		int nowMarbles = joshCollection - joshLost;
+
 
 
         /* Exercise 17
         17. Megan has 19 seashells. How many more seashells does she need to
         find to have 25 seashells in her collection?
         */
+		int meganSeashells = 19;
+		int hasMore = 25;
+		int sheNeeds = hasMore - meganSeashells;
+
 
 
         /* Exercise 18
         18. Brad has 17 balloons. 8 balloons are red and the rest are green. How
         many green balloons does Brad have?
         */
+		int bradBallonstotal = 17;
+		int bradRedones = 8;
+		int greenBallons = bradBallonstotal - bradRedones;
+
+
 
 
         /* Exercise 19
         19. There are 38 books on the shelf. Marta put 10 more books on the shelf.
         How many books are on the shelf now?
         */
+		int shelfBook = 38;
+		int moreBook = 10;
+		int totalBookonshelf= shelfBook + moreBook;
+
 
 
         /* Exercise 20
         20. A bee has 6 legs. How many legs do 8 bees have?
         */
+		int oneBeeleg = 6;
+		int manyBeeleg = 8;
+		int allBeeleg = oneBeeleg * manyBeeleg;
+
 
 
         /* Exercise 21
         21. Mrs. Hilt bought an ice cream cone for 99 cents. How much would 2 ice
         cream cones cost?
         */
+		double iceHiltbrought = 0.99;
+		double icecreamFortwo = 2;
+		double creamConescost= icecreamFortwo * iceHiltbrought;
+
+
 
 
         /* Exercise 22
@@ -147,18 +223,30 @@ public class Exercises {
         rocks to complete the border. She has 64 rocks. How many more rocks
         does she need to complete the border?
         */
+		int borderGarden = 125;
+		int hasRocks = 64;
+		int moreRocksneeded = borderGarden - hasRocks;
+
 
 
         /* Exercise 23
         23. Mrs. Hilt had 38 marbles. She lost 15 of them. How many marbles does
         she have left?
         */
+		int marblesHilthas = 38;
+		int lostHiltmarbles = 15;
+		int leftMarblesnow = marblesHilthas - lostHiltmarbles;
+
 
 
         /* Exercise 24
         24. Mrs. Hilt and her sister drove to a concert 78 miles away. They drove 32
         miles and then stopped for gas. How many miles did they have left to drive?
         */
+		int hiltandSisterdrove = 78;
+		int droveFar= 32;
+		int milesLefttodrive = hiltandSisterdrove - droveFar;
+
 
 
         /* Exercise 25
@@ -166,18 +254,31 @@ public class Exercises {
         morning and 45 minutes shoveling snow on Saturday afternoon. How
         much total time (in minutes) did she spend shoveling snow?
         */
+		int spentShoveling = 90;
+		int spentShovelingsaturday= 45;
+		int totalTimeshoveling = spentShoveling - spentShovelingsaturday;
+
 
 
         /* Exercise 26
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
         */
+		double hotDogshilt = 6;
+		double hotEachdogs = 0.50;
+		double shePaytotal= hotDogshilt * hotEachdogs;
+
+
 
 
         /* Exercise 27
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
+		double hiltHasmoney = 0.50;
+		double pencilsCosthilt = 0.7;
+		double pencilsShecanbuy = hiltHasmoney / pencilsCosthilt;
+		
 
 
         /* Exercise 28
