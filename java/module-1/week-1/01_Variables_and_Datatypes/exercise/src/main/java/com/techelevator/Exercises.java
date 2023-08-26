@@ -278,7 +278,7 @@ public class Exercises {
 		double hiltHasmoney = 0.50;
 		double pencilsCosthilt = 0.7;
 		double pencilsShecanbuy = hiltHasmoney / pencilsCosthilt;
-		
+
 
 
         /* Exercise 28
@@ -286,30 +286,51 @@ public class Exercises {
         were orange. If 20 of the butterflies were orange, how many of them
         were red?
         */
+		int totalbutterfliesHilt = 33;
+		int butterfliesOrange = 20;
+		int buuterfliesRed = totalbutterfliesHilt - butterfliesOrange;
+
 
 
         /* Exercise 29
         29. Kate gave the clerk $1.00. Her candy cost 54 cents. How much change
         should Kate get back?
         */
+		double kateSpent = 1.00;
+		double kateCandycost = 0.54;
+		double  kateReturn = kateSpent - kateCandycost;
+
+
 
 
         /* Exercise 30
         30. Mark has 13 trees in his backyard. If he plants 12 more, how many trees
         will he have?
         */
+		int markBackyardtrees = 13;
+		int markPlantmore = 12;
+		int markTotaltrees = markBackyardtrees - markPlantmore;
+
 
 
         /* Exercise 31
         31. Joy will see her grandma in two days. How many hours until she sees
         her?
         */
+		int joyGradmavisitdays = 2;
+		int  noOfHours = 24;
+		int hoursUntilthen = joyGradmavisitdays * noOfHours;
+
 
 
         /* Exercise 32
         32. Kim has 4 cousins. She wants to give each one 5 pieces of gum. How
         much gum will she need?
         */
+		int kimNoofcousins = 4;
+		int piecesOfgums = 5;
+		int everyoneWillhave = kimNoofcousins * piecesOfgums;
+
 
 
         /* Exercise 33
