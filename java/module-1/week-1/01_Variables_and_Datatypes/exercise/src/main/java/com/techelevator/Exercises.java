@@ -99,10 +99,6 @@ public class Exercises {
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
         */
-		double foundQuater = 0.75;
-		double foundDime = 0.10;
-		double foundNickels = 0.5;
-		double TotalMoney = foundQuater + foundDime + foundNickels;
 
 
 
@@ -157,10 +153,13 @@ public class Exercises {
         15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2.50 on a pencil
         case. How much money does she have left?
         */
-             double hiltHas = 10.00;
-			 double spentOntoytruck = 3.00;
-			 double spentOnpencilcase = 2.50;
-			 double MoneySpend =  spentOntoytruck + spentOnpencilcase - hiltHas ;
+            double hiltHasmoney = 10.0;
+			double spendToymoney = 3.0;
+			double pencilSpendall = 2.50;
+			double moneyTotalhilthas = hiltHasmoney - spendToymoney -pencilSpendall;
+			
+
+
 
 
 
@@ -262,9 +261,9 @@ public class Exercises {
         morning and 45 minutes shoveling snow on Saturday afternoon. How
         much total time (in minutes) did she spend shoveling snow?
         */
-		double spentShoveling = 1.30;
-		double spentShovelingsaturday= 0.45;
-		double totalTimeshoveling = spentShoveling - spentShovelingsaturday;
+		int spentShoveling = 90;
+		int spentShovelingsaturday= 45;
+		int totalTimeshoveling = spentShoveling + spentShovelingsaturday;
 
 
 
@@ -283,9 +282,9 @@ public class Exercises {
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
-		int  hiltHasmoney = 50;
+		int  hiltHasmoneywithher = 50;
 		int pencilsCosthilt = 7;
-		int pencilsShecanbuy = hiltHasmoney / pencilsCosthilt;
+		int pencilsShecanbuy = hiltHasmoneywithher / pencilsCosthilt;
 
 
 
@@ -570,7 +569,7 @@ public class Exercises {
 	    and then divide the total number of rooms to be painted by the combined rate.
 	    */
 
-	
+
 
 	    /* Exercise 52
 	    52. Create and assign variables to hold a first name, last name, and middle initial. Using concatenation,
