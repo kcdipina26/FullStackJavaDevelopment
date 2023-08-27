@@ -18,6 +18,8 @@ public class Exercises {
         nests?
 
 		// ### EXAMPLE:
+
+         */
 		int numberOfBirds = 6;
 		int numberOfNests = 3;
 		int numberOfExtraBirds = numberOfBirds - numberOfNests;
@@ -97,9 +99,9 @@ public class Exercises {
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
         */
-		double foundQuater = 0.4;
+		double foundQuater = 0.75;
 		double foundDime = 0.10;
-		double foundNickels = 2 * 0.20;
+		double foundNickels = 0.5;
 		double TotalMoney = foundQuater + foundDime + foundNickels;
 
 
@@ -123,7 +125,7 @@ public class Exercises {
         */
 		double boughtYoyocents = 0.24;
 		double boughtWhistlecents = 0.14;
-		double  spendTotaltwo = boughtWhistlecents + boughtWhistlecents;
+		double  spendTotalontwo = boughtYoyocents + boughtWhistlecents;
 
 
 
@@ -155,6 +157,12 @@ public class Exercises {
         15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2.50 on a pencil
         case. How much money does she have left?
         */
+             double hiltHas = 10.00;
+			 double spentOntoytruck = 3.00;
+			 double spentOnpencilcase = 2.50;
+			 double MoneySpend =  spentOntoytruck + spentOnpencilcase - hiltHas ;
+
+
 
 
         /* Exercise 16
@@ -254,9 +262,9 @@ public class Exercises {
         morning and 45 minutes shoveling snow on Saturday afternoon. How
         much total time (in minutes) did she spend shoveling snow?
         */
-		int spentShoveling = 90;
-		int spentShovelingsaturday= 45;
-		int totalTimeshoveling = spentShoveling - spentShovelingsaturday;
+		double spentShoveling = 1.30;
+		double spentShovelingsaturday= 0.45;
+		double totalTimeshoveling = spentShoveling - spentShovelingsaturday;
 
 
 
@@ -275,9 +283,11 @@ public class Exercises {
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
-		double hiltHasmoney = 0.50;
-		double pencilsCosthilt = 0.7;
-		double pencilsShecanbuy = hiltHasmoney / pencilsCosthilt;
+		int  hiltHasmoney = 50;
+		int pencilsCosthilt = 7;
+		int pencilsShecanbuy = hiltHasmoney / pencilsCosthilt;
+
+
 
 
 
@@ -337,9 +347,9 @@ public class Exercises {
         33. Dan has $3.00. He bought a candy bar for $1.00. How much money is
         left?
         */
-		int danMoneyamount = 3;
-		int danCandybought = 1;
-		int amountOfmoneyleft = danMoneyamount - danCandybought;
+		double danMoneyamount = 3.00;
+		double danCandybought = 1.00;
+		double amountOfmoneyleft = danMoneyamount - danCandybought;
 
 
 
@@ -560,10 +570,7 @@ public class Exercises {
 	    and then divide the total number of rooms to be painted by the combined rate.
 	    */
 
-		double billPainthours = 2.15;
-		double jillPainthours = 1.90;
-
-     
+	
 
 	    /* Exercise 52
 	    52. Create and assign variables to hold a first name, last name, and middle initial. Using concatenation,
@@ -572,11 +579,7 @@ public class Exercises {
 		with a period. Use "Grace", "Hopper, and "B" for the first name, last name, and middle initial.
 		Example: "John", "Smith, "D" —> "Smith, John D."
 	    */
-            char firstName =
-		 char lastname = "Smith",
-							char middleiinitial = "D"
-							char holdfullname = "John D"
-							char
+
 
 
 	    /* Exercise 53
