@@ -16,7 +16,7 @@ public class Exercises {
         /* Exercise 2
         2. There are 6 birds and 3 nests. How many more birds are there than
         nests?
-        */
+
 		// ### EXAMPLE:
 		int numberOfBirds = 6;
 		int numberOfNests = 3;
@@ -309,7 +309,7 @@ public class Exercises {
         */
 		int markBackyardtrees = 13;
 		int markPlantmore = 12;
-		int markTotaltrees = markBackyardtrees - markPlantmore;
+		int markTotaltrees = markBackyardtrees + markPlantmore;
 
 
 
@@ -337,6 +337,11 @@ public class Exercises {
         33. Dan has $3.00. He bought a candy bar for $1.00. How much money is
         left?
         */
+		int danMoneyamount = 3;
+		int danCandybought = 1;
+		int amountOfmoneyleft = danMoneyamount - danCandybought;
+
+
 
 
         /* Exercise 34
@@ -344,23 +349,41 @@ public class Exercises {
         on boats in the lake?
         */
 
+		int totalBoatinthelake = 5;
+		int peopleOneachboat = 3;
+		int totalPeople = totalBoatinthelake * peopleOneachboat;
+
+
+
 
         /* Exercise 35
         35. Ellen had 380 legos, but she lost 57 of them. How many legos does she
         have now?
         */
+		int ellenLegos = 380;
+		int ellenLost = 57;
+		int ellenRemainlegos = ellenLegos - ellenLost;
+
 
 
         /* Exercise 36
         36. Arthur baked 35 muffins. How many more muffins does Arthur have to
         bake to have 83 muffins?
         */
+		int authurBakedmuffins = 35;
+		int authurNeedstobake = 83;
+		int authurMoremuffins = authurNeedstobake - authurBakedmuffins;
+
 
 
         /* Exercise 37
         37. Willy has 1400 crayons. Lucy has 290 crayons. How many more
         crayons does Willy have then Lucy?
         */
+		int willyCrayons = 1400;
+		int lucyCrayons = 290;
+		int crayonsMore = willyCrayons - lucyCrayons;
+
 
 
         /* Exercise 38
@@ -368,11 +391,22 @@ public class Exercises {
         many stickers do you have?
         */
 
+		int noOfstickersonapage = 10;
+		int stickersOnpages  = 22;
+		int  stickersHaveintotal = noOfstickersonapage * stickersOnpages;
+
+
 
         /* Exercise 39
         39. There are 100 cupcakes for 8 children to share. How much will each
         person get if they share the cupcakes equally?
         */
+		double cupakesForchildren = 100;
+		double noOfchildren = 8;
+		double eachPersongets = cupakesForchildren / noOfchildren;
+
+
+
 
 
         /* Exercise 40
@@ -380,6 +414,15 @@ public class Exercises {
         tiny glass jars. If each jar is to contain six cookies, how many
         cookies will not be placed in a jar?
         */
+         int gingerBreadcookies = 47;
+		 int jarsWithcookies = 6;
+		 int cookiesPlacesinjar = gingerBreadcookies / jarsWithcookies;
+		 int cookiesNotplacedinjar = gingerBreadcookies % jarsWithcookies;
+
+
+
+
+
 
 
         /* Exercise 41
@@ -388,12 +431,25 @@ public class Exercises {
         how many will be left with Marian?
         */
 
+		int crossantsPrepared = 59;
+		int crossantsReceivedbyneighbour = 8;
+		int leftCrossants = crossantsPrepared / crossantsReceivedbyneighbour;
+		int martinLeftwith = crossantsPrepared % crossantsReceivedbyneighbour;
+
+
+
+
 
         /* Exercise 42
         42. Marian also baked oatmeal cookies for her classmates. If she can
         place 12 cookies on a tray at a time, how many trays will she need to
         prepare 276 oatmeal cookies at a time?
         */
+		int cookiesPrepared = 276;
+		int cookiesOntray = 12;
+		int cookiesAbletoprepare = cookiesPrepared /  cookiesOntray;
+
+
 
 
         /* Exercise 43
@@ -402,12 +458,26 @@ public class Exercises {
         servings of bite-sized pretzels was Marian able to prepare?
         */
 
+		int madeBitesizepretzels = 480;
+		int oneServing = 12;
+		int totalServingofbitesize = madeBitesizepretzels / oneServing;
+
+
 
         /* Exercise 44
         44. Lastly, she baked 53 lemon cupcakes for the children living in the city
         orphanage. If two lemon cupcakes were left at home, how many
         boxes with 3 lemon cupcakes each were given away?
         */
+
+		int lemonBaked = 53;
+		int lemonCupakesleft = 2;
+		int lemonCupcakesgiveaway = 3;
+		int boxesLemongivenaway = lemonBaked - lemonCupakesleft;
+		int lemonCupcakesleft = boxesLemongivenaway / lemonCupcakesgiveaway;
+
+
+
 
 
         /* Exercise 45
@@ -416,6 +486,11 @@ public class Exercises {
         uneaten?
         */
 
+		int momPreparedcarrots = 74;
+		int carrotsServedequally = 12;
+		int carrotsUneaten = momPreparedcarrots / carrotsServedequally;
+		int carrotsSticksleft = momPreparedcarrots % carrotsServedequally;
+
 
         /* Exercise 46
         46. Susie and her sister gathered all 98 of their teddy bears and placed
@@ -423,13 +498,22 @@ public class Exercises {
         maximum of 7 teddy bears, how many shelves will be filled?
         */
 
+		int teddyBeargathered = 98;
+		int shelfCancarry = 7;
+		int shelvesdWithteddybears = teddyBeargathered / shelfCancarry;
+
+
+
+
 
         /* Exercise 47
         47. Susie’s mother collected all family pictures and wanted to place all of
         them in an album. If an album can contain 20 pictures, how many
         albums will she need if there are 480 pictures?
         */
-
+         int totalNoofpictures = 480;
+		 int albumPictures = 20;
+		 int albumSheneed = totalNoofpictures / albumPictures;
 
         /* Exercise 48
         48. Joe, Susie’s brother, collected all 94 trading cards scattered in his
@@ -437,6 +521,13 @@ public class Exercises {
         cards, how many boxes were filled and how many cards are there in
         the unfilled box?
         */
+		int brotherCollectedtradingcard = 94;
+		int fullBoxlimitcard = 8;
+		int boxesFilled = brotherCollectedtradingcard / fullBoxlimitcard;
+		int boxesTotalfilled = brotherCollectedtradingcard % fullBoxlimitcard;
+
+
+
 
 
         /* Exercise 49
@@ -444,12 +535,22 @@ public class Exercises {
         210 books to be distributed equally on the 10 shelves he repaired,
         how many books will each shelf contain?
         */
+		int susieFatherbooks = 210;
+		int shelvesDistributed = 10;
+		int eachBookonshelf = susieFatherbooks / shelvesDistributed;
 
 
         /* Exercise 50
         50. Cristina baked 17 croissants. If she planned to serve this equally to
         her seven guests, how many will each have?
         */
+		double cristinaBakedcroissants = 17.00;
+		double  servedEquallytoguest = 7.00;
+		double eachHavecroissants = cristinaBakedcroissants / servedEquallytoguest;
+
+
+
+
 
 
 	    /* Exercise 51
@@ -458,6 +559,10 @@ public class Exercises {
 	    Hint: Calculate the rate at which each painter can complete a room (rooms / hour), combine those rates, 
 	    and then divide the total number of rooms to be painted by the combined rate.
 	    */
+
+		double billPainthours = 2.15;
+		double jillPainthours = 1.90;
+
      
 
 	    /* Exercise 52
@@ -467,6 +572,11 @@ public class Exercises {
 		with a period. Use "Grace", "Hopper, and "B" for the first name, last name, and middle initial.
 		Example: "John", "Smith, "D" —> "Smith, John D."
 	    */
+            char firstName =
+		 char lastname = "Smith",
+							char middleiinitial = "D"
+							char holdfullname = "John D"
+							char
 
 
 	    /* Exercise 53
