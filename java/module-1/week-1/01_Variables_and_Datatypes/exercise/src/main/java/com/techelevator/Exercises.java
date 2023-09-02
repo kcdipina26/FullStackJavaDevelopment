@@ -157,7 +157,7 @@ public class Exercises {
 			double spendToymoney = 3.0;
 			double pencilSpendall = 2.50;
 			double moneyTotalhilthas = hiltHasmoney - spendToymoney -pencilSpendall;
-			
+
 
 
 
