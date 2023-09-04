@@ -1,6 +1,7 @@
 package com.techelevator;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class Exercises {
@@ -34,7 +35,24 @@ public class Exercises {
 	 *
 	 */
 	public String animalGroupName(String animalName) {
-		return null;
+		Map<String, String> animalGroupName = new HashMap<String, String>();
+		animalGroupName.put("rhino", "Crash");
+		animalGroupName.put("giraffe", "Tower");
+		animalGroupName.put("lion", "Pride");
+		animalGroupName.put("crow", "Murder");
+		animalGroupName.put("flamingo", "Pet");
+		animalGroupName.put("deer", "Herd");
+		animalGroupName.put("dog", "Pack");
+		animalGroupName.put("crocodile", "Float");
+		String name = "unknown";
+		if (animalName == null || animalName == "") {
+			return name;
+		} else if (animalGroupName.containsKey(animalName.toLowerCase())) {
+			return animalGroupName.get(animalName.toLowerCase());
+
+		}
+
+		return name;
 	}
 
 	/*
@@ -60,6 +78,9 @@ public class Exercises {
 	 *
 	 */
 	public double isItOnSale(String itemNumber) {
+
+
+
 		return -1.0;
 	}
 
@@ -76,6 +97,11 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
+
+
+
+
+
 		return null;
 	}
 
@@ -103,9 +129,13 @@ public class Exercises {
 	 * beginningAndEnding(["code", "bug", "cat"]) → {"b": "g", "c": "t"}
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
-	public Map<String, String> beginningAndEnding(String[] words) {
-		return null;
-	}
+      
+
+
+
+
+	
+	
 
 	/*
 	 * Given an array of Strings, return a Map<String, Integer> with a key for each different String, with the value the
@@ -120,8 +150,25 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		return null;
+		   Map<String, Integer> wordCount = new HashMap<String, Integer>();
+		   int counter = 0;
+		   for (String word: words){
+			   if (wordCount.containsKey(word)){
+				   wordCount.put(word, wordCount.get(word) + 1);
+			   } else {
+				   wordCount.put(word, 1);
+
+			   }
+		   }
+				   return wordCount;
 	}
+
+
+
+
+
+
+
 
 	/*
 	 * Given an array of int values, return a Map<Integer, Integer> with a key for each int, with the value the
@@ -135,7 +182,18 @@ public class Exercises {
 	 *
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
-		return null;
+		Map<Integer, Integer> integerCount = new HashMap<Integer, Integer>();
+
+		for (Integer count:ints){
+			if(integerCount.containsKey(count)){
+				integerCount.put(count, integerCount.get(count) +1);
+
+			} else {
+				integerCount.put(count, 1);
+
+		}
+	}
+		return integerCount;
 	}
 
 	/*
@@ -148,7 +206,19 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
-		return null;
+		Map<String, Boolean> wordMultiple = new HashMap<>();
+		Map<String, Integers> wordCount = new HashMap<>();
+
+		for(String word:words){
+			if(wordCount.containsKey(word)){
+				wordCount.put(word, wordCount.get(word)+1);
+
+			}else{
+				wordCount.put(word,1);
+
+		}
+	}
+		return integerCount;
 	}
 
 	/*
@@ -181,8 +251,9 @@ public class Exercises {
 	 * last2Revisited(["hixxhi", "xaxxaxaxx", "axxxaaxx"]) → {"hixxhi": 1, "xaxxaxaxx": 1, "axxxaaxx": 2}
 	 *
 	 */
-	public Map<String, Integer> last2Revisited(String[] words) {
+	
+		public Map<String, Integer> last2Revisited(String[] words) {
 		return null;
 	}
 
-}
+
