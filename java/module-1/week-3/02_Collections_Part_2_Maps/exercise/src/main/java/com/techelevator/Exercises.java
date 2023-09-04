@@ -207,18 +207,21 @@ public class Exercises {
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
 		Map<String, Boolean> wordMultiple = new HashMap<>();
-		Map<String, Integers> wordCount = new HashMap<>();
+		Map<String, Integer> wordCount = new HashMap<>();
 
 		for(String word:words){
 			if(wordCount.containsKey(word)){
 				wordCount.put(word, wordCount.get(word)+1);
 
-			}else{
+			} else {
 				wordCount.put(word,1);
 
 		}
 	}
-		return integerCount;
+		return wordMultiple;
+
+
+
 	}
 
 	/*
