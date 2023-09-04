@@ -14,8 +14,21 @@ public class Exercise05 {
     getTotal({"pizza": 15, "wings": 10, "bread": 7, "total": 32}) -> 32
      */
     public int getTotal(Map<String, Integer> costs) {
+        int total = 0;
+        boolean hasTotalKey = costs.contains Key("total");
+
+        if(hasTotalKey) {
+
+            total = cost.get("total");
+
+        } else
+        {
+            for (int value : costs, values ())
+                total +=value;
+
+        }
 
 
-        return 0;
+        return total;
     }
 }

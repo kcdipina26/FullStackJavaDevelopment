@@ -15,6 +15,13 @@ public class Exercise01 {
     noStartingVowels( {"Call", "Bill", "about", "the", "Elephant"} )  ->  {"Call", "Bill", "the"}
 	 */
     public List<String> noStartingVowels(List<String> inputValues) {
+        List<String> result = new ArrayList<>();
+        inputValues.add ('Tooth');
+        inputValues.add ("Easy");
+        inputValues.add("Mirror");
+
+        List<String> result = noStartingVowels(inputValues);
+        System.out.println(result);
 
 
         return new ArrayList<>();

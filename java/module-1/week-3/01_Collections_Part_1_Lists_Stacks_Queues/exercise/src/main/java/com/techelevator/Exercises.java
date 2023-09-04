@@ -1,5 +1,6 @@
 package com.techelevator;
 
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,8 +16,14 @@ public class Exercises {
 	 array2List( {"Red", "Orange", "Yellow"} )  ->  ["Red", "Orange", "Yellow"]
 	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"]
 	 */
+
 	public List<String> array2List(String[] stringArray) {
-		return null;
+		List<String> array2List = new ArrayList<>();
+		for(int i=0; i < stringArray.length; i++) {
+			array2List.add(stringArray[i]);
+		}
+
+		return array2List;
 	}
 
 	/*
@@ -25,9 +32,16 @@ public class Exercises {
 	 list2Array( ["Red", "Orange", "Yellow"] )  ->  {"Red", "Orange", "Yellow"}
 	 list2Array( ["Left", "Right", "Forward", "Back"] )  ->  {"Left", "Right", "Forward", "Back"}
 	 */
-	public String[] list2Array(List<String> stringList) {
-		return null;
-	}
+   public String[] list2Array(List<String> stringList){
+	   String[] list2Array = new String[stringList.size()];
+	   for(int i = 0; i< stringList.size(); i++){
+		   list2Array[i] = stringList.get(i);
+
+	   }
+	   return list2Array;
+   }
+
+
 
 	/*
 	 Given an array of Strings, return an ArrayList containing the same Strings in the same order
@@ -37,8 +51,21 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		return null;
+
+			List<String> no4LettersWords = new ArrayList<>();
+
+				for (String word : stringArray){
+					if (word.length() != 4){
+						no4LettersWords.add(word);
+
+					}
+				}
+				return no4LettersWords;
 	}
+
+
+
+
 
 	/*
 	 Given an array of ints, divide each int by 2, and return an ArrayList of Doubles.
@@ -50,6 +77,11 @@ public class Exercises {
 		return null;
 	}
 
+
+
+
+
+
 	/*
 	 Given a List of Integers, return the largest value.
 	 findLargest( [11, 200, 43, 84, 9917, 4321, 1, 33333, 8997] ) -> 33333
@@ -57,8 +89,21 @@ public class Exercises {
 	 findLargest( [34070, 1380, 81238, 7782, 234, 64362, 627] ) -> 81238
 	 */
 	public Integer findLargest(List<Integer> integerList) {
-		return null;
+
+		int findLargest = integerList.get(0);
+		for (int i = 1; i < integerList.size(); i++)
+			if (integerList.get(i) > findLargest) {
+				findLargest = integerList.get(i);
+
+
+			}
+		return findLargest;
 	}
+
+
+
+
+
 
 	/*
 	 Given an array of Integers, return a List of Integers containing just the odd values.
@@ -67,8 +112,22 @@ public class Exercises {
 	 oddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]
 	 */
 	public List<Integer> oddOnly(Integer[] integerArray) {
-		return null;
+		List<Integer> oddonly = new ArrayList<>(); //Here we should be adding values
+		for (Integer number : integerArray){
+			if(number % 2> 0) { // we will be adding condition here odd only
+				oddonly.add(number);
+
+			}
+		}
+		return oddonly;
+
 	}
+
+
+
+
+
+
 
 	/*
 	 Given a List of Integers, and an int value, return true if the int value appears two or more times in
@@ -80,6 +139,12 @@ public class Exercises {
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
 		return false;
 	}
+
+
+
+
+
+
 
 	/*
 	 Given an array of Integers, return a List that contains the same Integers (as Strings). Except any multiple of 3
@@ -96,6 +161,11 @@ public class Exercises {
 	public List<String> fizzBuzzList(Integer[] integerArray) {
 		return null;
 	}
+
+
+
+
+
 
 	/*
 	 Given two lists of Integers, interleave them beginning with the first element in the first list followed

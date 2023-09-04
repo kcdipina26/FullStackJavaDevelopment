@@ -18,6 +18,7 @@ public class Exercise02 {
     public List<String> shuffleList(List<String> inputValues) {
 
 
+
         return new ArrayList<>();
     }
 }

@@ -17,6 +17,7 @@ public class Exercise04 {
     public Map<Character, Integer> getLetterCount(String input) {
 
 
+
         return new HashMap<>();
     }
 }
