@@ -81,27 +81,25 @@ public class Exercises {
 	 * isItOnSale("dungeon9999") → 0.00
 	 *
 	 */
-	public Double isItOnSale(String itemnumber) {
+	public Double isItOnSale(String itemnumber)
+	{
 		Map<String, Double> isItOnSale = new HashMap<>();
 		isItOnSale.put("KITCHEN4001", 0.20);
 		isItOnSale.put("GARAGE1070", 0.15);
 		isItOnSale.put("LIVINGROOM", 0.10);
 		isItOnSale.put("KITCHEN073", 0.40);
-		isItOnSale.put("BEDROOM3464", 0.60);
+		isItOnSale.put("BEDROOM3434", 0.60);
 		isItOnSale.put("BATH0073", 0.15);
 
-		double notOnsale = 0.00;
-
-		if (itemnumber == null || itemnumber =="") {
-
+		if (itemnumber == null || itemnumber == "")
+		{
 			return 0.0;
-		} else if (isItOnSale.containsKey(itemnumber.toUpperCase())){
-        return isItOnSale.get(itemnumber.toUpperCase());
-
+		}
+		else if (isItOnSale.containsKey(itemnumber.toUpperCase()))
+		{
+        	return isItOnSale.get(itemnumber.toUpperCase());
 		}
         return 0.00;
-
-
 	}
 
 
@@ -120,6 +118,28 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
+
+		// So peterPaul is a hashmap being passed into this function. So it is usable already and has the data in it.
+		// Is the hashmap like this?
+		/*
+			Key<Peter>, Value<2000>
+			Paul, 99
+
+			OR is it like
+
+			Key<Peter 2000>, Value<Paul 99>
+
+		 */
+
+		// If peter has > 0 money
+		if(true)
+		{
+			// If paul has less than $10 or < 1000, because 1000 = $10
+			if(true)
+			{
+				// The balance transfer
+			}
+		}
 
 		return peterPaul;
 	}
