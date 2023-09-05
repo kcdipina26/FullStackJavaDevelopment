@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+
+
+
 public class Exercises {
 
 	/*
@@ -53,6 +56,7 @@ public class Exercises {
 		}
 
 		return name;
+
 	}
 
 	/*
@@ -77,12 +81,31 @@ public class Exercises {
 	 * isItOnSale("dungeon9999") → 0.00
 	 *
 	 */
-	public double isItOnSale(String itemNumber) {
+	public Double isItOnSale(String itemnumber) {
+		Map<String, Double> isItOnSale = new HashMap<>();
+		isItOnSale.put("KITCHEN4001", 0.20);
+		isItOnSale.put("GARAGE1070", 0.15);
+		isItOnSale.put("LIVINGROOM", 0.10);
+		isItOnSale.put("KITCHEN073", 0.40);
+		isItOnSale.put("BEDROOM3464", 0.60);
+		isItOnSale.put("BATH0073", 0.15);
+
+		double notOnsale = 0.00;
+
+		if (itemnumber == null || itemnumber =="") {
+
+			return 0.0;
+		} else if (isItOnSale.containsKey(itemnumber.toUpperCase())){
+        return isItOnSale.get(itemnumber.toUpperCase());
+
+		}
+        return 0.00;
 
 
-
-		return -1.0;
 	}
+
+
+
 
 	/*
 	 * Modify and return the given Map as follows: if "Peter" has more than 0 money, transfer half of it to "Paul",
@@ -98,12 +121,11 @@ public class Exercises {
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
 
-
-
-
-
-		return null;
+		return peterPaul;
 	}
+
+
+
 
 	/*
 	 * Modify and return the given Map as follows: if "Peter" has $50 or more, AND "Paul" has $100 or more,
@@ -115,8 +137,12 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
-		return null;
+
+
+		return peterPaul;
 	}
+
+
 
 	/*
 	 * Given an array of non-empty strings, return a Map<String, String> where, for every String in the array,
@@ -129,13 +155,29 @@ public class Exercises {
 	 * beginningAndEnding(["code", "bug", "cat"]) → {"b": "g", "c": "t"}
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
-      
+
+	public Map<String, String> beginningAndEnding(String[] words) {
+		Map<String, String> beginningAndEnding = new HashMap<>();
+		/*loop thru arrays and take substring from elements and put them to the new map
+
+*/		 for(String word: words){
+	         beginningAndEnding.put(word.substring(0,1),word.substring( word.length()-1));
+
+		}
+          return beginningAndEnding;
+
+
+	}
 
 
 
 
-	
-	
+
+
+
+
+
+
 
 	/*
 	 * Given an array of Strings, return a Map<String, Integer> with a key for each different String, with the value the
@@ -150,24 +192,18 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		   Map<String, Integer> wordCount = new HashMap<String, Integer>();
-		   int counter = 0;
-		   for (String word: words){
-			   if (wordCount.containsKey(word)){
-				   wordCount.put(word, wordCount.get(word) + 1);
-			   } else {
-				   wordCount.put(word, 1);
+		Map<String, Integer> wordCount = new HashMap<String, Integer>();
+		int counter = 0;
+		for (String word : words) {
+			if (wordCount.containsKey(word)) {
+				wordCount.put(word, wordCount.get(word) + 1);
+			} else {
+				wordCount.put(word, 1);
 
-			   }
-		   }
-				   return wordCount;
+			}
+		}
+		return wordCount;
 	}
-
-
-
-
-
-
 
 
 	/*
@@ -184,17 +220,18 @@ public class Exercises {
 	public Map<Integer, Integer> integerCount(int[] ints) {
 		Map<Integer, Integer> integerCount = new HashMap<Integer, Integer>();
 
-		for (Integer count:ints){
-			if(integerCount.containsKey(count)){
-				integerCount.put(count, integerCount.get(count) +1);
+		for (Integer count : ints) {
+			if (integerCount.containsKey(count)) {
+				integerCount.put(count, integerCount.get(count) + 1);
 
 			} else {
 				integerCount.put(count, 1);
 
+			}
 		}
-	}
 		return integerCount;
 	}
+
 
 	/*
 	 * Given an array of Strings, return a Map<String, Boolean> where each different String is a key and value
@@ -209,17 +246,16 @@ public class Exercises {
 		Map<String, Boolean> wordMultiple = new HashMap<>();
 		Map<String, Integer> wordCount = new HashMap<>();
 
-		for(String word:words){
-			if(wordCount.containsKey(word)){
-				wordCount.put(word, wordCount.get(word)+1);
+		for (String word : words) {
+			if (wordCount.containsKey(word)) {
+				wordCount.put(word, wordCount.get(word) + 1);
 
 			} else {
-				wordCount.put(word,1);
+				wordCount.put(word, 1);
 
+			}
 		}
-	}
 		return wordMultiple;
-
 
 
 	}
@@ -235,7 +271,15 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse,
-			Map<String, Integer> remoteWarehouse) {
+													 Map<String, Integer> remoteWarehouse) {
+
+
+
+
+
+
+
+
 		return null;
 	}
 
@@ -254,9 +298,11 @@ public class Exercises {
 	 * last2Revisited(["hixxhi", "xaxxaxaxx", "axxxaaxx"]) → {"hixxhi": 1, "xaxxaxaxx": 1, "axxxaaxx": 2}
 	 *
 	 */
-	
-		public Map<String, Integer> last2Revisited(String[] words) {
+
+	public Map<String, Integer> last2Revisited(String[] words) {
 		return null;
+
+
 	}
 
-
+}
