@@ -10,6 +10,7 @@ public class Exercise00_GettingStarted {
     // You can use this constant in your solutions.
     private final int FREEZING_TEMPERATURE_F = 32;
 
+
     /*
     Advise the caller if rain is expected in the forecast. If precipitation is expected, the forecast may be calling for rain or snow.
     If the temperature stays below freezing, snow is expected. If the temperature climbs above the

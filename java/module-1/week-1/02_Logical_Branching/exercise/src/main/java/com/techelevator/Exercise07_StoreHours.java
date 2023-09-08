@@ -21,6 +21,7 @@ public class Exercise07_StoreHours {
         12am = 0   
      */
 
+
     /*
     Shelia's Seashell Store is open between 8 am (hour 8) and 5 pm (hour 17).
     Implement the logic to determine if the store is open based on the current hour.
@@ -32,7 +33,12 @@ public class Exercise07_StoreHours {
     isStoreOpen(22) ➔ false
      */
     public boolean isStoreOpen(int currentHour) {
-        return false;
+        if ((currentHour >= 8) && (currentHour < 17)) {
+            return true;
+        } else {
+            return false;
+
+        }
     }
 
     /*
@@ -54,7 +60,12 @@ public class Exercise07_StoreHours {
     isStoreOpen(12, 'S') ➔ false
      */
     public boolean isStoreOpen(int currentHour, char currentDay) {
-        return false;
+        if ((currentHour >= 8 && currentHour < 17) && (currentDay == 'M' || currentDay == 'W' || currentDay == 'F')) {
+            return true;
+
+        } else {
+            return false;
+        }
     }
 
 
@@ -71,7 +82,41 @@ public class Exercise07_StoreHours {
     isStoreOpen(12, 'S', false) ➔ false
     isStoreOpen(9, 'S', true) ➔ true
      */
-    public boolean isStoreOpen(int currentHour, char currentDay, boolean isSummer) {
-        return false;
+    public boolean isStoreOpen(int currentHour, char currentDay, boolean isSummer)
+    {
+        if (isSummer)
+        {
+            // If wednesday and between 8 am and 8 pm
+            if (currentDay == 'W' && (currentHour >= 8 && currentHour < 20))
+            {
+                return true;
+            }
+            // If Saturday and between 9 to 3 pm
+            else if(currentDay == 'S' && (currentHour >= 9 && currentHour < 15))
+            {
+                return true;
+            }
+            // If Monday or Friday, and between 8 to 5 pm
+            else if((currentDay == 'M' || currentDay == 'F') && (currentHour >= 8 && currentHour < 17))
+            {
+                return true;
+            }
+            // Else, we dont care
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            if((currentDay == 'M' || currentDay == 'W' || currentDay == 'F') && (currentHour >= 8 && currentHour < 17))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -32,13 +32,13 @@ public class Exercise02_BoardingGate {
         // here we initalized the array to the no of seats
         seatingChart = new boolean[numberOfSeats];
 
-       // for each seats make the seats available in the seating chart
+        // for each seats make the seats available in the seating chart
         for (int i = 0; i < numberOfSeats; i++)
-       // make the current seat available
+        // make the current seat available
         {
             seatingChart[i] = AVAILABLE;
         }
-         // return the seating chart array out of the method.
+        // return the seating chart array out of the method.
 
         return seatingChart;
     }
@@ -60,8 +60,20 @@ public class Exercise02_BoardingGate {
      */
     public int getAvailableSeatCount(boolean[] seatingChart) {
 
+        //this will keep  track of the seats
+        int availableSeatCount = 0;
+// for loop use to go through each seats
+        for (int i = 0; i < seatingChart.length; i++) {
 
-        return 0;
+            //inside this loop we check if current seats i is available and if yes increment ++ to keep track
+            if (seatingChart[i] == AVAILABLE) {
+                availableSeatCount++;
+
+            }
+
+        }
+// finally return availableseatcount so we know the count of avaialable seats.
+        return availableSeatCount;
     }
 
     /*
@@ -77,7 +89,20 @@ public class Exercise02_BoardingGate {
     getNumberOfFullRows([OCCUPIED, AVAILABLE, AVAILABLE, OCCUPIED, AVAILABLE, AVAILABLE]) → 0
      */
     public int getNumberOfFullRows(boolean[] seatingChart) {
-        return 0;
+
+
+
+
+
+
+
+
+
+            return 0;
+        }
+
     }
 
-}
+
+
+

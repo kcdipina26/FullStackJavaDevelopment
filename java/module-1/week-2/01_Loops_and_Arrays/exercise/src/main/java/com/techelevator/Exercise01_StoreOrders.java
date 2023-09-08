@@ -43,8 +43,22 @@ public class Exercise01_StoreOrders {
 	 createOrder() → [10, 40, 31, 41]
      */
     public int[] createOrder() {
-        return new int[] {};
+        int []  orderPizza = new int[]{SMALL_CHEESE, CALZONE, LARGE_PEPPERONI,SPAGHETTI_PIE};
+        return orderPizza;
+
+
     }
+
+////        int [] createOrder;
+//        createOrder = new int[4];
+//        createOrder[0] = SMALL_CHEESE;
+//        createOrder[1] = CALZONE;
+//        createOrder[2] = LARGE_PEPPERONI;
+//        createOrder[3] = SPAGHETTI_PIE;
+//
+//        return createOrder;
+//    }
+
 
     /*
     Sally realized that she needed to know how many calzones her shop sells per day.
@@ -61,8 +75,23 @@ public class Exercise01_StoreOrders {
     getCalzoneSales([]) → 0
      */
     public int getCalzoneSales(int[] orders) {
-        return 0;
+
+        //for (int i = 1; (initializer, i <= 5; condition i++ iteratoronecycleperblockofcode) {
+        //    System.out.println("Hello World!");
+
+        int counter = 0;
+
+        for (int i = 0; i< orders.length; i++ ) {                    //incrementation of i &  i condn orders.length due unkwn i
+
+            if (orders[i] == CALZONE) {
+                counter++;                                                     //CONDITION FOR LOOP
+
+            }
+        }
+
+        return counter;
     }
+// is this an example of a infinite loop maybe just condition?
 
     /*
     Sally also needs to know the total revenue for all cheese pizzas sold on any given day.
@@ -78,7 +107,19 @@ public class Exercise01_StoreOrders {
     getCheesePizzaRevenue([SMALL_CHEESE, SMALL_PEPPERONI, MEDIUM_CHEESE]) → 19
     getCheesePizzaRevenue([SMALL_PEPPERONI, MEDIUM_PEPPERONI]) → 0
      */
-    public int getCheesePizzaRevenue(int[] orders) {
-        return 0;
+    public int getCheesePizzaRevenue(int[] orders) {                   //orders = arrays using for loop
+       int totalRevenue = 0;                  //TR=O to keep track of TR
+        for (int order : orders) {
+            if (order == SMALL_CHEESE) {                   //checking size if and adding TR
+                totalRevenue = totalRevenue + 8;
+            } else if (order== MEDIUM_CHEESE) {
+                totalRevenue = totalRevenue + 11;
+
+            } else if (order==LARGE_CHEESE) {
+              totalRevenue = totalRevenue + 14;
+            }
+        }
+
+        return totalRevenue;
     }
 }

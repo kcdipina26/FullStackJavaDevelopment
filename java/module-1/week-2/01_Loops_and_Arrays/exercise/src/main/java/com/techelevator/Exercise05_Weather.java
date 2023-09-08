@@ -25,6 +25,11 @@ public class Exercise05_Weather {
 	belowFreezing([]) → 0
     */
 	public int belowFreezing(int[] dailyHighs) {
+
+
+
+
+
 		return 0;
 	}
 

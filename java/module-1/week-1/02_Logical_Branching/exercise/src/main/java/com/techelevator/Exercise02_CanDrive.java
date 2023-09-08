@@ -21,8 +21,17 @@ public class Exercise02_CanDrive {
     canDrive(false, false) ➔ false
      */
     public boolean canDrive(boolean hasPermit, boolean withLicensedPassenger) {
-        return false;
+
+        if (hasPermit && withLicensedPassenger) {
+
+            return true;
+
+        } else {
+            return false;
+        }
+
     }
+
 
     /*
     In some states, the licensed passenger must be of a certain age.
@@ -34,7 +43,16 @@ public class Exercise02_CanDrive {
     canDrive(false, true, 23) ➔ false
      */
     public boolean canDrive(boolean hasPermit, boolean withLicensedPassenger, int passengerAge) {
-        return false;
+
+
+        if (hasPermit && (withLicensedPassenger && passengerAge >= 21)) {
+            return true;
+        } else {
+
+
+            return false;
+
+        }
     }
 
     /*
@@ -48,6 +66,25 @@ public class Exercise02_CanDrive {
     canDrive(false, true, 23, true) ➔ false
      */
     public boolean canDrive(boolean hasPermit, boolean withLicensedPassenger, int passengerAge, boolean isPassengerOurGuardian) {
+
+
+        // condition here: If person has a permit && the passenger is a licensed drive 18 or older
+        // if the passenger is the driver's legal guardian or 21 or older if passenger is not the driver's legal guardian
+        //  if person does not have a permit, cannot dirve even if they are of age and  has legal guardian
+
+        if (hasPermit) {
+            if (withLicensedPassenger) {
+                if (isPassengerOurGuardian && passengerAge >= 18) {
+                    return true;
+                } else if (!isPassengerOurGuardian && passengerAge >= 21) {
+                    return true;
+                }
+            }
+        }
+
         return false;
     }
 }
+
+
+

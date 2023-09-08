@@ -26,6 +26,12 @@ public class Exercise04_HotelReservation {
     calculateStayTotal(3) ➔ 269.97
      */
     public double calculateStayTotal(int numberOfNights) {
+
+
+
+
+
+
         return 0.0;
     }
 
@@ -41,6 +47,10 @@ public class Exercise04_HotelReservation {
     calculateStayTotal(3, true) ➔ 344.97
      */
     public double calculateStayTotal(int numOfTotalNights, boolean includesParking) {
+
+
+
+
         return 0.0;
     }
 
