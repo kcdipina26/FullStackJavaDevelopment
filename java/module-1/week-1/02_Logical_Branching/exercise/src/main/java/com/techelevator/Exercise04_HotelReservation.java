@@ -1,5 +1,8 @@
 package com.techelevator;
 
+import javax.swing.*;
+import java.awt.*;
+
 public class Exercise04_HotelReservation {
 
     /*
@@ -26,15 +29,12 @@ public class Exercise04_HotelReservation {
     calculateStayTotal(3) ➔ 269.97
      */
     public double calculateStayTotal(int numberOfNights) {
-
-
-
-
-
-
-        return 0.0;
+        if (numberOfNights <= 2) {
+            return DAILY_RATE * numberOfNights;
+        } else {
+            return DISCOUNT_RATE * numberOfNights;
+        }
     }
-
     /*
     The owners of Innovator's Inn offer parking at an additional cost of $25.00 per night.
     Calculate the stay total based on the number of nights (int) 
@@ -47,12 +47,13 @@ public class Exercise04_HotelReservation {
     calculateStayTotal(3, true) ➔ 344.97
      */
     public double calculateStayTotal(int numOfTotalNights, boolean includesParking) {
+        double baseTOtal = calculateStayTotal(numOfTotalNights);
+        if(includesParking) {
+            baseTOtal += (PARKING_RATE * numOfTotalNights);
+        }
+        return baseTOtal;
+        }
 
-
-
-
-        return 0.0;
-    }
 
     /*
     Innovator's Inn offers late checkout—but it comes at a price.
@@ -71,6 +72,10 @@ public class Exercise04_HotelReservation {
     calculateStayTotal(3, true, true) ➔ 364.97
      */
     public double calculateStayTotal(int numOfTotalNights, boolean includesParking, boolean includesLateCheckout) {
-        return 0.0;
+        double baseTotal = calculateStayTotal(numOfTotalNights, includesParking);
+        if (includesLateCheckout){
+            baseTotal += (LATE_CHECKOUT_FEE * numOfTotalNights);
+        }
+        return baseTotal;
     }
 }
