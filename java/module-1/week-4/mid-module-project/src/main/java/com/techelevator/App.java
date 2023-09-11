@@ -139,9 +139,13 @@ public class App {
                          */
                         displayPublishedYearsList(publishedYears);
                     } else if (searchBooksMenuSelection == 5) {
+                        List<Integer> matchingIndexes = findMostRecentBooks();
+                        displaySearchResults(matchingIndexes);
+
                         // Find the most recent books
                         /*
-                         Requirement: 7b
+
+                        equirement: 7b
                          Replace `displayPublishedYearsList(publishedYears)` with calls
                          to the `findMostRecentBooks()` and `displaySearchResults()` methods.
                          */
@@ -149,6 +153,8 @@ public class App {
                     } else if (searchBooksMenuSelection == 6) {
                         // Search by price
                         double filterPrice = promptForPrice("Enter price: ");
+                        List<Integer> matchingIndexes = filterByPrice(filterPrice);
+                        displaySearchResults(matchingIndexes);
                         /*
                          Requirement: 8b
                          Replace `displayPricesList(prices)` with calls to the
@@ -159,6 +165,8 @@ public class App {
                         // Search by price range
                         double filterFromPrice= promptForPrice("Enter \"from\" price: ");
                         double filterToPrice = promptForPrice("Enter \"to\" price: ");
+                        List<Integer> matchingIndexes = filterByPriceRange(filterFromPrice, filterToPrice);
+                        displaySearchResults(matchingIndexes);
                         /*
                          Requirement: 9b
                          Replace `displayPricesList(prices)` with calls to the
@@ -166,8 +174,12 @@ public class App {
                          */
                         displayPricesList(prices);
                     } else if (searchBooksMenuSelection == 8) {
+                        List<Integer> leastExpensiveBooks = findLeastExpensiveBooks();
+
+                        displaySearchResults(leastExpensiveBooks);
                         // Find the least expensive books
                         /*
+
                          Requirement: 10b
                          Replace `displayPricesList(prices)` with calls to the
                          `findLeastExpensiveBooks()` and `displaySearchResults()` methods.
@@ -183,6 +195,9 @@ public class App {
         }
 
     }
+
+
+
 
     /*
      Requirement: 2
@@ -276,15 +291,33 @@ public class App {
      Requirement: 7a
      Add the `private List<Integer> findMostRecentBooks()` method.
      See README for additional details.
+
      */
 
+    private List <Integer> findMostRecentBooks() {
+        List<Integer> matchingIndexes = new ArrayList<>();
+        int mostRecentYear = Collections.max(publishedYears);
+        for(int i = 0; i < publishedYears.size(); i++) {
+            if (publishedYears.get(i) == mostRecentYear) {
+                matchingIndexes.add(i);
+            }
+        }
+        return matchingIndexes;
+    }
     /*
      Requirement: 8a
      Complete the `filterByPrice()` method.
      See README for additional details.
      */
     private List<Integer> filterByPrice(double filterPrice) {
-        return null;
+        List<Integer> matchingIndexes = new ArrayList<>();
+        for (int i = 0; i < prices.size(); i++) {
+            double bookPrice = prices.get(i).doubleValue();
+            if(bookPrice <= filterPrice) {
+                matchingIndexes.add(i);
+            }
+        }
+        return matchingIndexes;
     }
 
     /*
@@ -293,14 +326,52 @@ public class App {
      See README for additional details.
      */
     private List<Integer> filterByPriceRange(double filterFromPrice, double filterToPrice) {
-        return null;
+        List<Integer> matchingIndexes = new ArrayList<>();
+        for(int i = 0; i < prices.size(); i++) {
+            double bookPrice = prices.get(i).doubleValue();
+            if(bookPrice >= filterFromPrice && bookPrice <= filterToPrice) {
+                matchingIndexes.add(i);
+
+            }
+        }
+        return matchingIndexes;
     }
+
 
     /*
      Requirement: 10a
      Add the `private List<Integer> findLeastExpensiveBooks()` method.
      See README for additional details.
      */
+    private List<Integer> findLeastExpensiveBooks() {
+        List<Integer> leastExpensiveBookIndexes = new ArrayList<>();
+
+        List<Integer> leastExpensiveIndexes = new ArrayList<>();
+
+        // Initialize the minimum price to a large value initially
+        BigDecimal minPrice = new BigDecimal(Double.MAX_VALUE);
+
+        for (int i = 0; i < prices.size(); i++) {
+            BigDecimal currentPrice = prices.get(i);
+
+
+            if (currentPrice.compareTo(minPrice) < 0) {
+                minPrice = currentPrice;
+                leastExpensiveIndexes.clear();
+                leastExpensiveIndexes.add(i);
+            }
+
+            else if (currentPrice.compareTo(minPrice) == 0) {
+                leastExpensiveIndexes.add(i);
+            }
+        }
+
+        return leastExpensiveIndexes;
+    }
+
+
+
+
 
 
     // UI methods
