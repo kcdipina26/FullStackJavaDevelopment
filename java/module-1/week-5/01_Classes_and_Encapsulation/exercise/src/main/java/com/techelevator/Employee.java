@@ -13,14 +13,16 @@ public class Employee {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.department = "";
+        this.department = department;
         this.annualSalary = annualSalary;
 
     }
     public Employee(int employeeId, String firstName, String lastName, double annualSalary) {
         this.employeeId = employeeId;
         this.firstName = firstName;
-
+        this.lastName = lastName;
+        this.department = "";
+        this.annualSalary = annualSalary;
     }
 
     public int getEmployeeId() {
@@ -35,8 +37,12 @@ public class Employee {
         return lastName;
     }
 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public String getFullName() {
-        return lastName + ","+ firstName;
+        return lastName + ", "+ firstName;
     }
 
     public String getDepartment() {
