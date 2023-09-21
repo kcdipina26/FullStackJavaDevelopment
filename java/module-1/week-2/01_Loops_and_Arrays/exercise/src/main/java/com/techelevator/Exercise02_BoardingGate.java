@@ -89,19 +89,26 @@ public class Exercise02_BoardingGate {
     getNumberOfFullRows([OCCUPIED, AVAILABLE, AVAILABLE, OCCUPIED, AVAILABLE, AVAILABLE]) → 0
      */
     public int getNumberOfFullRows(boolean[] seatingChart) {
+        int numberOfSeatsPerRow = 3;
+        int fullRowCount = 0;
+        int rowOccupancyCount = 0;
 
-
-
-
-
-
-
-
-
-            return 0;
+        for (int i = 0; i < seatingChart.length; i++) {
+            if (!seatingChart[i]) {
+                rowOccupancyCount++;
+            }
+            if ((i + 1) % numberOfSeatsPerRow == 0) {
+                if (rowOccupancyCount == numberOfSeatsPerRow) {
+                    fullRowCount++;
+                }
+                rowOccupancyCount = 0;
+            }
         }
-
+        return fullRowCount;
     }
+
+
+}
 
 
 

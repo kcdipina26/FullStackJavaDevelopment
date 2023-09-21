@@ -75,8 +75,13 @@ public class Exercise03_Shirts {
     placeRequest([]) → false
      */
     public boolean placeRequest(char[] order) {
+        for (char shirt : order) {
+            if (shirt == SMALL_TSHIRT) {
+                return true;
+            }
+        }
         return false;
-
+    }
 
     }
-}
+

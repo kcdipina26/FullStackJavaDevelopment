@@ -26,8 +26,8 @@ public class Exercise04_Cards {
     */
     public String getFirstCard(String[] hand) {
 
-        if (hand != null && hand.length > 0 ) {        //!= not null nothing and hand.length unknown value of card
-            return hand [0];
+        if (hand != null && hand.length > 0) {        //!= not null nothing and hand.length unknown value of card
+            return hand[0];
 
 
         } else {
@@ -81,10 +81,18 @@ public class Exercise04_Cards {
     discardTopCard([]) → []
      */
     public String[] discardTopCard(String[] remainingDeck) {
+        if (remainingDeck != null && remainingDeck.length > 1) {
+            String[] newDeck = new String[remainingDeck.length - 1];
+            for (int i = 1; i < remainingDeck.length; i++) {
+                newDeck[i - 1] = remainingDeck[i];
+            }
+            return newDeck;
+        } else {
+            return new String[]{};
 
 
-
-
-        return new String[] {};
-    }    
+        }
+    }
 }
+
+
