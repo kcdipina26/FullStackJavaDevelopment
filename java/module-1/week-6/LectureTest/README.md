@@ -1,0 +1,3 @@
+1. Create three more classes that have an IS-A relationship with the vehicle class or a child of it (extends--- Bicycle, Plane)
+2. Create two classes with a HAS-A relationship with existing classes. (composition--- Example: A car has an engine, and an engine class can have its own methods/properties.)
+3. Create two interfaces that describe the behaviors of an object. (implements--- Both planes and helicopters can fly, but each has different implementations of how to accomplish it.)
