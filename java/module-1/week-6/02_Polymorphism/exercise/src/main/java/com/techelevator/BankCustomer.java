@@ -15,7 +15,7 @@ public class BankCustomer {
         this.accounts = new ArrayList<>();
 
     }
-   public Accountable[] getAccount() {
+   public Accountable[] getAccounts() {
         return accounts.toArray(new Accountable[0]);
    }
    public void addAccount(Accountable newAccount) {
