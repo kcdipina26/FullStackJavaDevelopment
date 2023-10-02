@@ -8,31 +8,40 @@ public class BankAccount {
     public BankAccount(String accountHolderName, String accountNumber) {
         this.accountHolderName = accountHolderName;
         this.accountNumber = accountNumber;
-        this.balance = 0;
-
+        this.balance = 0; // Default balance to $0
     }
-    public BankAccount(String accountHolderName, String accountNumber, int balance){
+
+    public BankAccount(String accountHolderName, String accountNumber, int balance) {
         this.accountHolderName = accountHolderName;
         this.accountNumber = accountNumber;
         this.balance = balance;
     }
-    public String getAccountHolderName(){
+
+    public String getAccountHolderName() {
         return accountHolderName;
     }
-    public String getAccountNumber(){
+
+    public String getAccountNumber() {
         return accountNumber;
     }
-    public int getBalance(){
+
+    public int getBalance() {
         return balance;
     }
+
     public int deposit(int amountToDeposit) {
-        balance+= amountToDeposit;
+        if (amountToDeposit > 0) {
+            balance += amountToDeposit;
+        }
         return balance;
     }
-    public int withdraw(int amountToWithdraw){
-        if(balance >= amountToWithdraw){
+
+    public int withdraw(int amountToWithdraw) {
+        if (amountToWithdraw > 0 && balance >= amountToWithdraw) {
             balance -= amountToWithdraw;
         }
         return balance;
     }
+
 }
+
