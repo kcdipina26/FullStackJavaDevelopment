@@ -2,6 +2,7 @@ package com.techelevator;
 
 public class Car {
 
+    //constants
     public static final String COMPACT = "compact";
     public static final String MIDSIZE = "midsize";
     public static final String FULLSIZE = "fullsize";
@@ -9,6 +10,7 @@ public class Car {
     private String type;
     private String license;
 
+//
     public Car(String type, String license) {
         this.type = type;
         this.license = license;

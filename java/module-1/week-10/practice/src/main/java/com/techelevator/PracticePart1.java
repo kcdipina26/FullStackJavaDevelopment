@@ -17,8 +17,10 @@ public class PracticePart1 {
 		Q01_removeFraction(8.0, 2.5) -> 3.0
 	*/
 	public double Q01_removeFraction(double numerator, double denominator) {
-		return 0;
+		double result = numerator / denominator;
+		return Math.floor(result);
 	}
+
 
 	/*
 	Topics: Expressions
@@ -34,7 +36,7 @@ public class PracticePart1 {
 		Q02_isWaterTemperatureExtreme(212) -> true
 	*/
 	public boolean Q02_isWaterTemperatureExtreme(int temperature) {
-		return false;
+		return  temperature <= 32 || temperature >= 212;
 	}
 
 	/*
@@ -58,8 +60,15 @@ public class PracticePart1 {
 		Q03_isLeapYear(2019) -> false
 	*/
 	public boolean Q03_isLeapYear(int year) {
-		return false;
-	}
+		if (year % 400 == 0) {
+			return true;
+		}
+		if (year % 100 == 0) {
+			return false;
+		}
+		return year % 4 == 0;
+	};
+
 
 	/*
 	Topics: Branching
@@ -79,8 +88,27 @@ public class PracticePart1 {
 		Q04_carWashPrice('P', true, true) -> 11
 	*/
 	public int Q04_carWashPrice(char typeOfWash, boolean isMorning, boolean isWeekend) {
-		return 0;
+		int price = 0;
+		switch (typeOfWash) {
+			case 'B':
+				price = 8;
+				break;
+			case 'P':
+				price = 10;
+				break;
+			case 'S':
+				price = 12;
+				break;
+		}
+		if (isMorning) {
+			price -= 1;
+		}
+		if (isWeekend) {
+			price += 2;
+		}
+		return price;
 	}
+
 
 	/*
 	Topics: Loops
@@ -96,8 +124,15 @@ public class PracticePart1 {
 		 Q05_sumOfNumbersDivisibleBy7Between(56, 49) -> 0
 	*/
 	public int Q05_sumOfNumbersDivisibleBy7Between(int lowestNumber, int highestNumber) {
-		return 0;
+		int sum = 0;
+		for (int i = lowestNumber; i <= highestNumber; i++) {
+			if (i % 7 == 0) {
+				sum += i;
+			}
+		}
+		return sum;
 	}
+
 
 	/*
 	Topics: Strings, Branching
@@ -117,8 +152,15 @@ public class PracticePart1 {
 		Q06_wordBetweenTags("<P>This is between.", "<P>") -> "" // End tag <P> not found.
 	*/
 	public String Q06_stringBetweenTags(String stringToSearch, String tag) {
-		return null;
+		int startIndex = stringToSearch.indexOf(tag);
+		int endIndex = stringToSearch.lastIndexOf(tag);
+		if (startIndex != -1 && endIndex != -1 && startIndex != endIndex) {
+			return stringToSearch.substring(startIndex + tag.length(), endIndex);
+		}
+		return "";
 	}
+
+
 
 	/*
 	Topics: Strings, Loops
@@ -141,7 +183,7 @@ public class PracticePart1 {
 	*/
 	public boolean Q07_isPalindrome(String word) {
 		String reverseWord = "";
-		for (int i = 0; i < word.length(); i++) {
+		for (int i = 0; i < word.length(); i--) { // 	Fix Start from the end of the string,
 			reverseWord += word.charAt(i);
 		}
 		return word.equalsIgnoreCase(reverseWord);
@@ -166,7 +208,8 @@ public class PracticePart1 {
 	Q08_allowanceCalculator(7, 0, 40) -> 10
 	*/
 	public int Q08_allowanceCalculator(int weekly, int gift, int bonus) {
-		int allowance = weekly + gift + bonus * 4 / 52;
+		int allowance = weekly + gift / 52 + bonus / 13;  // Divide by 13 for quarterly bonus distribution;
+
 		return allowance;
 	}
 
@@ -189,15 +232,14 @@ public class PracticePart1 {
 		Q09_isIncreasing(new int[]{2, 1, 8, 32, 256}) -> false
 	*/
 	public boolean Q09_isIncreasing(int[] numbers) {
-		boolean result = true;
 		for (int i = 0; i < numbers.length - 1; i++) {
-			if (numbers[i] > numbers[i++]) {
-				result = false;
-				break;
+			if (numbers[i] >= numbers[i + 1]) {  // Check if the current number is greater than or equal to the next number
+				return false;  // If it is, then the array is not continuously increasing, so return false
 			}
 		}
-		return result;
+		return true;  // If the loop completes without returning false, then the array is continuously increasing
 	}
+
 
 	/*
 	Topics: Lists, Loops
@@ -213,8 +255,13 @@ public class PracticePart1 {
 		Q10_reverseList(new ArrayList<>(List.of())) -> []
 	*/
 	public List<Integer> Q10_reverseList(List<Integer> numbers) {
-		return new ArrayList<>();
+		List<Integer> reversed = new ArrayList<>();
+		for (int i = numbers.size() - 1; i >= 0; i--) {
+			reversed.add(numbers.get(i));
+		}
+		return reversed;
 	}
+
 
 	/*
 	Topics: Loops, Arrays, Collections
@@ -237,6 +284,11 @@ public class PracticePart1 {
 		 	-> {"Dog": 3, "Chicken": 1, "Fish": 1, "Cat": 2, "Dinosaur": 1, "Llama": 1}
 	*/
 	public Map<String, Integer> Q11_idealPets(String[] suggestedPets) {
-		return new HashMap<>();
+		Map<String, Integer> map = new HashMap<>();
+		for (String pet : suggestedPets) {
+			map.put(pet, map.getOrDefault(pet, 0) + 1);
+		}
+		return map;
 	}
+
 }
