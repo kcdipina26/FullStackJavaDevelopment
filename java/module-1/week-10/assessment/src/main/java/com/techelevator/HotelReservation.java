@@ -7,17 +7,15 @@ public class HotelReservation {
     Name of the customer for the reservation .
 
      */
-private String name;
+    private String name;
 
-private int numberOfNights; //reservation is for ? no of nights.
+    private int numberOfNights; //reservation is for ? no of nights.
 
     private int nightlyRate; //Price of the room per night (in $)
 
     private int estimateTotal; //total price the estimate for the reservation ( in $)
 
     //Building the constructors name of custome and everythign else
-
-
 
 
     public String getName() {
@@ -75,20 +73,20 @@ private int numberOfNights; //reservation is for ? no of nights.
             cleaningFee = 25;
             if (usedMinibar) {
                 cleaningFee *= 2;
-
             }
+
         }
-    }
-       // return this.estimateTotal + cleaningFee;
+
+        // return this.estimateTotal + cleaningFee;
+
 
         //  int minibarFee = usedMinibar ? 15
 
-        //  @Override
+        // @Override
 
         //  public String toString() {
-        //return this.name + ";" + this.estimateTotal;
+        return this.name + ";" + this.estimateTotal;
 
-
-
-
+    }
 }
+
