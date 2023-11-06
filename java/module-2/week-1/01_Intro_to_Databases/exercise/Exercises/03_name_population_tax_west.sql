@@ -1,3 +1,6 @@
 -- 3. The name, population, and sales tax of the states in the "West" census region (13 rows)
-SELECT * FROM pg_catalog.pg_tables WHERE state_name = 'states';
+SELECT state_name, population, sales_tax
+FROM state
+WHERE census_region = 'West';
+
 
