@@ -32,6 +32,9 @@ public class Movie {
         this.collectionId = collectionId;
     }
 
+    public Movie(int movieId, String title, String description, String director, int releaseYear, int runningTime) {
+    }
+
     public int getId() {
         return id;
     }
