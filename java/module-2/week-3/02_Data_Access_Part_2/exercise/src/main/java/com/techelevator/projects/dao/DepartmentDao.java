@@ -2,6 +2,8 @@ package com.techelevator.projects.dao;
 
 import com.techelevator.projects.model.Department;
 
+
+
 import java.util.List;
 
 public interface DepartmentDao {
@@ -49,4 +51,6 @@ public interface DepartmentDao {
 	 * @return the number of departments deleted
 	 */
 	int deleteDepartmentById(int id);
+
+	int deleteDepartmentById(int id, int newDepartmentId);
 }
