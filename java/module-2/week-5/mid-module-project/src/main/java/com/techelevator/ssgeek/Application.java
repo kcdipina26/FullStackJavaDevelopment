@@ -23,10 +23,11 @@ public class Application {
         // Create the DAOs needed by the controller.
         //*****************************************************************************************
         // TODO: When you implement a new DAO, create an instance of it here, replacing the NULL
-        CustomerDao customerDao = null;
-        ProductDao productDao = null;
-        SaleDao saleDao = null;
-        LineItemDao lineItemDao = null;
+        CustomerDao customerDao = new JdbcCustomerDao(dataSource);
+        ProductDao productDao = new JdbcProductDao(dataSource);
+        SaleDao saleDao = new JdbcSaleDao(dataSource);
+        LineItemDao lineItemDao = new JdbcLineItemDao(dataSource);
+
         //*****************************************************************************************
 
         // Create the basic i/o mechanism (the console)

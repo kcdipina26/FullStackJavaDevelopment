@@ -9,6 +9,8 @@ public class Product {
     private BigDecimal price;
     private String imageName;
 
+
+
     public int getProductId() {
         return productId;
     }
