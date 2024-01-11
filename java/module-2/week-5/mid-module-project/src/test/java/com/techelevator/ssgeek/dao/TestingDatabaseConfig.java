@@ -16,8 +16,7 @@ import java.util.Objects;
 @Configuration
 public class TestingDatabaseConfig {
 
-    // To use an existing PostgreSQL database, set the following environment variables.
-    // Otherwise, a temporary database will be created on the local machine.
+    // To use an existing PostgreSQL database, set the following environment variables.remeber lecture
     private static final String DB_HOST =
             Objects.requireNonNullElse(System.getenv("DB_HOST"), "localhost");
     private static final String DB_PORT =
