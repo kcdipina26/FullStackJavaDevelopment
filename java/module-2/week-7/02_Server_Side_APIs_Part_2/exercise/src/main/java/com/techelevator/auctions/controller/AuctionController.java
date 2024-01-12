@@ -2,6 +2,7 @@ package com.techelevator.auctions.controller;
 
 import java.util.List;
 
+import com.techelevator.auctions.exception.DaoException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.techelevator.auctions.dao.AuctionDao;
 import com.techelevator.auctions.model.Auction;
 import org.springframework.web.server.ResponseStatusException;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/auctions")
@@ -38,6 +41,18 @@ public class AuctionController {
         return auctionDao.getAuctions();
     }
 
+    @RequestMapping(path = "/{id}", method = RequestMethod.PUT)
+    public Auction update(@PathVariable int id, @Valid @RequestBody Auction auction) {
+        try {
+            // Ensure the ID in the path is assigned to the auction object
+            auction.setId(id);
+            return auctionDao.updateAuction(auction);
+        } catch (DaoException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
+        }
+    }
+
+
     @RequestMapping(path = "/{id}", method = RequestMethod.GET)
     public Auction get(@PathVariable int id) {
         Auction auction = auctionDao.getAuctionById(id);
@@ -49,9 +64,20 @@ public class AuctionController {
     }
 
     @RequestMapping(path = "", method = RequestMethod.POST)
-    public Auction create(@RequestBody Auction auction) {
+    @ResponseStatus(HttpStatus.CREATED)
+    public Auction create(@Valid @RequestBody Auction auction) {
         return auctionDao.createAuction(auction);
     }
+
+@RequestMapping(path= "/{id}", method = RequestMethod.DELETE)
+@ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable int id) {
+        int result = auctionDao.deleteAuctionById(id);
+        if(result == 0) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Auction Not Found");
+
+        }
+}
 
 
 }
