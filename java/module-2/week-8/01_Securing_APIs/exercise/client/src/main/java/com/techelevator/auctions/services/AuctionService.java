@@ -34,11 +34,27 @@ public class AuctionService {
         Auction auction = null;
         try {
             // Add code here to send the request to the API and get the auction from the response.
-        } catch (RestClientResponseException | ResourceAccessException e) {
-            BasicLogger.log(e.getMessage());
+                // Construct the URL for the specific auction ID
+                String url = API_BASE_URL + id;
+                // Create a new HttpEntity with the headers needed for authentication
+                HttpEntity<Void> entity = makeAuthEntity();
+                // Send the GET request to retrieve the auction, and capture the response
+                ResponseEntity<Auction> response = restTemplate.exchange(url, HttpMethod.GET, entity, Auction.class);
+                // Extract the auction from the response body
+                auction = response.getBody();
+            } catch (RestClientResponseException e) {
+                // If there's an HTTP error, log the response error status and message
+                BasicLogger.log("Error getting auction: " + e.getRawStatusCode() + " : " + e.getStatusText());
+            } catch (ResourceAccessException e) {
+                // If there's a problem with the resource access, log the exception message
+                BasicLogger.log("Error getting auction: " + e.getMessage());
+            }
+
+            return auction;
+
         }
-        return auction;
-    }
+
+
 
     public Auction[] getAuctionsMatchingTitle(String title) {
         Auction[] auctions = null;
