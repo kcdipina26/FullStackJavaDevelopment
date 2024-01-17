@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 import com.techelevator.exception.DaoException;
+import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -97,6 +98,16 @@ public class JdbcUserDao implements UserDao {
         }
         return user;
     }
+    @Override
+    public String getStateCodeByUserId(int userId) {
+        String sql = "SELECT state_code FROM users WHERE user_id = ?";
+        try {
+            return jdbcTemplate.queryForObject(sql, String.class, userId);
+        } catch (DataAccessException e) {
+            throw new DaoException("Error getting state code for user: " + userId, e);
+        }
+    }
+
 
     private User mapRowToUser(SqlRowSet rs) {
         User user = new User();
