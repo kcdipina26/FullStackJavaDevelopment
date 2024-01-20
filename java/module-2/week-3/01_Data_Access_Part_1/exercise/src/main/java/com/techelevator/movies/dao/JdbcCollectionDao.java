@@ -60,7 +60,7 @@ public class JdbcCollectionDao implements CollectionDao{
     private Collection mapRowToCollection(SqlRowSet results) {
         Collection collection = new Collection();
         collection.setId(results.getInt("collection_id"));
-        collection.setName(results.getString("collection_name")); // Changed getNString to getString
+        collection.setName(results.getString("collection_name"));
         return collection;
     }
 
