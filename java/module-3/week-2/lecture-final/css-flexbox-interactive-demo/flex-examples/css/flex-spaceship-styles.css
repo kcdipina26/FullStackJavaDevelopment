@@ -1,0 +1,79 @@
+section{
+    border: 2px solid black;
+    height:50vh;
+}
+
+.space-fleet {
+    display: flex;
+}
+.spaceship {
+    border: 2px solid white;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    background-color: black;
+}
+
+/* Flex Direction 
+The flex-direction property defines the direction in which the flex items 
+are placed in the flex container.
+*/
+.space-fleet {
+    display: flex;
+    flex-direction: row; /* Default value: items are placed in a row */
+}
+
+/* Justify Content 
+justify-content defines the alignment along the main axis 
+(horizontal if flex-direction is row).
+*/
+.space-fleet {
+    display: flex;
+    /* Distributes space around items */
+    /* justify-content: space-around;  */
+    /* justify-content: space-between;  */
+     /* justify-content: space-evenly;  */
+     
+    /* justify-content: flex-start;  */
+    /* justify-content: flex-end;  */
+    justify-content: flex-start; 
+} 
+
+/* Align Items 
+align-items is used to align flex items along the cross axis 
+(vertical if flex-direction is row).
+*/
+.space-fleet {
+    display: flex;
+    align-items: center; /* Align items vertically in the center align-items: center, flex-start, flex-end, stretch */
+}
+
+/*
+Flex Grow, Shrink, and Basis
+These properties define how a flex item will grow or shrink relative to 
+the rest of the flex items in the container.
+*/
+
+.spaceship.discovery {
+    /*flex-grow: 1;  Items will grow to fill the container */
+}
+
+.spaceship.discovery {
+    /* flex-shrink: 1; Items will shrink if necessary */
+}
+
+.spaceship.discovery {
+   /* flex-basis: 100px;  Sets the initial length of an item */
+}
+
+/*
+Full Flex Item Example
+Combine grow, shrink, and basis for full control over your flex items.
+*/
+.spaceship.discovery {
+    flex: 2 1 100px; /* Grow, Shrink, Basis */
+}
+
+.spaceship.enterprise {
+    flex: 1 1 100px; /* Grow, Shrink, Basis */
+}

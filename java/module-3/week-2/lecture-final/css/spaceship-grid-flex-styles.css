@@ -1,0 +1,158 @@
+/* launch-dashboard-styles.css */
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*TODO  Dashboard Grid Layout */
+.dashboard {    
+    /* Two or three columns layout */
+    /* columns: 1fr 3fr;  */
+    /* Header, main content, footer */
+    /* rows: four rows: auto 1fr auto auto;  */
+    /* grid -  header, sidebar, main, nav, controls, footer*/
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto 1fr auto auto;
+
+    grid-template-areas:
+        "header header header"
+        "sidebar main nav"
+        "controls controls controls"
+        "footer footer footer";
+
+
+    gap: 10px;
+    height: 100vh;
+}
+
+.dashboard-header {
+    grid-area: header;
+    align-items: center;
+    justify-content: center;
+    background-color: #004d99;
+    color: white;    
+    font-weight: bold;
+
+    /* TODO: Responsive design - font size*/
+    font-weight: bold;
+    font-size: 3vw;
+    
+}
+
+/* TODO: Responsive design img */
+
+
+
+
+.dashboard-sidebar {
+    grid-area: sidebar;
+    background-color: #f0f0f0;
+}
+
+ /* Default value: items are placed in a row */
+.dashboard-main {
+    grid-area: main;
+    background-color: #e6e6e6;    
+    padding: 10px;
+   
+    
+   
+}
+
+
+.dashboard-nav {  
+    grid-area: nav;  
+    background-color: #f0f0f0;
+}
+
+.dashboard-controls {
+    grid-area: controls;   
+    background-color: #d9d9d9;
+}
+
+.dashboard-footer { 
+    grid-area: footer;  
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* TODO: Add space-fleet flexbox */
+
+.space-fleet{   
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: whitesmoke;
+    height:50%;
+
+}
+
+.atlantis{
+    order: 0;
+}
+
+.discovery{
+    order: 0;
+}
+
+.enterprise{
+    order: 0;
+}
+
+
+
+/* look and feel */
+.spaceship{
+    border: 2px solid white;
+    padding: 10px;
+    margin: 5px;
+    color:white;
+    background-color: black;
+}
+
+/* psuedo-selector */
+.space-fleet div:last-child{
+    background-color: green;
+}
+
+.space-fleet div:nth-child(even){
+    background-color: blue;
+}
+
+
+
+img{
+    width: 25vw;
+    height: 40vh;
+}
+
+
+
+/* TODO: ADD Media Query for smaller screens */
+
+
+@media screen and (max-width: 768px){
+    .dashboard{
+        grid-template-columns: 1fr;  /*stack columns on small screens */
+        grid-template-areas: 
+        "header"
+        "main"
+        "nav"
+        "sidebar"
+        "controls"
+        "footer";
+    }
+
+
+    .space-fleet{
+        flex-direction: row-reverse;
+        background-color: orange;
+    }
+
+
+}

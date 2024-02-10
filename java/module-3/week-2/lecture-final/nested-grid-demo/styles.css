@@ -1,0 +1,72 @@
+/* Outer Grid */
+.outer-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "sidebar content"
+        "footer footer";
+    gap: 10px;
+
+    height: 90vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(0, 132, 255);
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: rgb(131, 154, 165);
+}
+
+.content {
+    grid-area: content;
+    background-color: rgb(217, 213, 224);
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(126, 104, 167);
+}
+
+/* Nested (Inner) Grid */
+.inner-grid {
+    display: grid;
+    /* Three equal columns */
+    /* grid-template-columns: repeat(3, 1fr);  */
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+        "subcontent1 subcontent2 subcontent3"
+        "more-content more-content more-content";
+        
+    gap: 10px;
+}
+
+.subcontent1 {
+    grid-area: subcontent1;
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
+}
+.subcontent2 {
+    grid-area: subcontent2;
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
+}
+.subcontent3 {
+    grid-area: subcontent3;
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
+}
+
+.more-content{
+    grid-area: more-content;
+    background-color: rgb(117, 201, 128);
+    padding: 10px;
+    text-align: center;
+}
