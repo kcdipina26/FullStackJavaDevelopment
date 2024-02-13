@@ -1,0 +1,112 @@
+/* Styles that apply to the entire webpage */
+body {
+    background-color: lightgoldenrodyellow; /* Sets the background color of the page */
+    color: brown; /* Sets the text color for the page */
+    font-family: Arial, sans-serif; /* Sets the font for the page */
+}
+
+/* Styles the header of the webpage */
+header {
+    text-align: center; /* Centers the text in the header */
+}
+
+/* Styles images on the page */
+img {
+    max-width: 400px; /* Ensures images are no wider than 400 pixels */
+    height: auto; /* Keeps the image's aspect ratio */
+    display: block; /* Allows margin properties to center the image */
+    margin-left: auto; /* Centers the image horizontally */
+    margin-right: auto; /* Centers the image horizontally */
+}
+
+/* Styles tables */
+table {
+    width: 100%; /* Makes the table width span the full width of its container */
+    border: 1px solid #ddd; /* Sets a light grey border for the table */
+}
+
+/* Styles table headers and cells */
+th, td {
+    border: 1px solid #000; /* Sets a solid black border for table headers and cells */
+    padding: 8px; /* Adds space inside the borders of table cells and headers */
+}
+
+/* Styles table headers */
+th {
+    background-color: lightcoral; /* Sets a light coral background color for table headers */
+}
+
+/* Styles section headings */
+section h2 {
+    text-decoration: underline; /* Underlines all section headings */
+}
+
+/* Styles blockquotes for quotes section */
+blockquote {
+    font-style: italic; /* Italicizes text within blockquote elements */
+    margin-left: 20px; /* Adds left margin to blockquote for visual separation */
+}
+
+/* Part 2 code */
+#info-form {
+    background-color: beige; 
+    padding: 15px; /* Padding around the form content */
+    margin: 20px auto; /* Center form on the page with top and bottom margin */
+    max-width: 500px; /* Maximum width of the form */
+    border-radius: 5px; /* Rounded corners for aesthetic appeal */
+}
+
+/* Styles for each form field and label */
+#info-form .form-group {
+    margin-bottom: 10px; /* Space between each form group */
+}
+
+#info-form label {
+    display: block; /* Each label on a new line */
+    margin-bottom: 5px; /* Small space between label and input */
+}
+
+/* Styles for input fields */
+#info-form input[type="text"],
+#info-form input[type="email"],
+#info-form input[type="date"],
+#info-form input[type="color"],
+#info-form input[type="number"] {
+    width: 100%; /* Full width to stretch to container's width */
+    padding: 8px; /* Padding inside input for ease of text entry */
+    margin-bottom: 5px; /* Space after each input */
+    border: 1px solid #ccc; /* Subtle border color */
+    border-radius: 4px; /* Rounded corners to match the form container */
+}
+
+/* Styles for the confirmation checkbox */
+#info-form .checkbox {
+    margin-bottom: 10px; /* Consistent spacing with other form groups */
+}
+
+#info-form .checkbox label {
+    display: flex; /* Aligns the checkbox and label text nicely */
+    align-items: center; /* Centers items vertically */
+}
+
+#info-form .checkbox input[type="checkbox"] {
+    margin-right: 5px; /* Space between checkbox and label text */
+}
+
+/* Styles for the submit button */
+#info-form input[type="submit"] {
+    background-color: #008cba; /* A pleasant blue background */
+    color: white; /* Text color for contrast */
+    padding: 10px 15px; /* Padding around the button text */
+    border: none; /* No border for a cleaner look */
+    border-radius: 4px; /* Rounded corners to match other inputs */
+    cursor: pointer; /* Indicates the element is clickable */
+    width: auto; /* Do not stretch the button to full width */
+    display: block; /* Let the button be its own block */
+    margin: 10px auto 0; /* Center button horizontally and add space at the top */
+}
+
+/* Simple hover effect for the submit button to indicate interactivity */
+#info-form input[type="submit"]:hover {
+    background-color: #006080; /* Slightly darker shade of blue on hover */
+}

@@ -11,6 +11,10 @@ html{
     /* Header, main content, footer */
     /* rows: four rows: auto 1fr auto auto;  */
     /* grid -  header, sidebar, main, nav, controls, footer*/
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-row: auto 1fr auto auto; 
+    grid-template-columns: ;
     height: 100vh;
 }
 
@@ -34,6 +38,7 @@ html{
 
 
 .dashboard-sidebar {
+    grid-area:sidebar;
     background-color: #f0f0f0;
 }
 
@@ -41,11 +46,8 @@ html{
 .dashboard-main {
     background-color: #e6e6e6;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    
     padding: 10px;
-   
-    flex-direction: row; 
    
 }
 
@@ -54,7 +56,8 @@ html{
     background-color: #f0f0f0;
 }
 
-.dashboard-controls {   
+.dashboard-controls {  
+    grid-area:controls; 
     background-color: #d9d9d9;
 }
 
@@ -67,7 +70,12 @@ html{
 
 /* TODO: Add space-fleet flexbox */
 
+.space-fleet{
+    background-color:
+    display: flex;
+    flex-direction
 
+}
 
 
 /* TODO: ADD Media Query for smaller screens */
