@@ -19,3 +19,95 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+/* Style the <aside> element */
+aside {
+  position: fixed;
+  width: 200px; /* Set the width of the aside to 200px as per the test requirement */
+  height: 100vh; /* Full viewport height */
+  border-right: 1px solid #00ADEE; /* Right border to separate from the content */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+}
+
+/* Style the <aside> image */
+aside img {
+  width: 120px; /* The width can be adjusted as needed */
+  margin: 10px auto; /* Center the image within the aside */
+}
+
+/* Style the navigation (<nav>) */
+nav ul {
+  list-style: none;
+  padding: 0; /* Removed padding-left */
+  margin: 0;
+}
+
+nav li {
+  text-align: center;
+  text-transform: uppercase; /* Make text uppercase */
+  border-bottom: 1px solid #00ADEE; /* Border for each list item */
+}
+
+nav a {
+  font-weight: bold;
+  color: #00ADEE;
+  text-decoration: none;
+  display: block;
+  padding: 15px 20px; /* Consistent padding for all links */
+}
+
+nav li:first-child a {
+  text-decoration: underline; /* Underline the first link */
+}
+
+/* Adjust the <main> content area */
+main {
+  margin-left: 200px; /* Adjust this value to match the aside width */
+  padding: 20px;
+  overflow: hidden; /* Fixes potential overflow issues */
+}
+
+/* Style the header and banner in <main> */
+header img, .banner {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+main > header > img {
+  height: 100px; /* Fixed height for the header image */
+  width: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap; /* Allow the sections to wrap on smaller screens */
+  margin: 0; /* Removed margin */
+  padding: 0; /* Removed padding */
+}
+
+section div {
+  flex: 1; /* Allow the div to grow and shrink */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+section div:not(:first-child) {
+  border-left: 2px solid #8CC36F; /* Border to separate divs */
+}
+
+/* Ensure spacing above sections */
+section div {
+  margin-top: 20px;
+}
+
+/* Style for section headers */
+section h2 {
+  color: #8CC36F; /* Set the color to green as per the test */
+}
+
+section h2 i {
+  margin-right: 5px;
+}
