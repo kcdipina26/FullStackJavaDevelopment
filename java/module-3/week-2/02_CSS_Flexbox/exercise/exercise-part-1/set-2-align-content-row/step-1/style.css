@@ -1,17 +1,20 @@
 body {
   margin: 20px;
   padding: 0;
-  font-size: 2.5em;
+  font-size: 16px; /* Adjusted for readability */
 }
 
 .container {
-  background-color: #F0F0F0;
+  display: flex; /* Makes the container a flex container */
+  justify-content: space-around; /* Distributes space evenly around items */
+  align-items: center; /* Centers items vertically */
 }
 
 .box {
-  padding: 40px 55px;
-  margin: 15px 0;
-  background-color: #00AFEF;
-  color: #fff;
-  border: solid 1px #777;
+  padding: 20px; /* Adjust padding as needed for visual appearance */
+  margin: 0 10px; /* Adjusts margin for additional spacing if needed */
+  /* Additional styling for box */
+  background-color: #00AFEF; /* Example background color */
+  color: #fff; /* Text color */
+  border: solid 1px #777; /* Example border */
 }

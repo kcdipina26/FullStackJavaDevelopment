@@ -1,6 +1,6 @@
 body {
   margin: 20px;
-  padding: 0
+  padding: 0;
 }
 
 header {
@@ -16,6 +16,9 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: flex; /* This makes the <ul> a flex container */
+  flex-direction: row; /* Aligns the flex items (children) in a row */
+  align-items: center; /* Centers the items vertically */
 }
 
 li {

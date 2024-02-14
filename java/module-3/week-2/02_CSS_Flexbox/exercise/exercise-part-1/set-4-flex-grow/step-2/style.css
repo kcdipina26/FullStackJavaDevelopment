@@ -1,23 +1,25 @@
 body {
   margin: 20px;
   padding: 0;
-  font-size: 2.5em;
+  font-size: 2.5em; /* Consider adjusting this if it makes the content too large */
 }
 
 .container {
+  display: flex; /* Establishes the container as a flex container */
+  flex-direction: row; /* Ensures the flex items are laid out in a row */
   background-color: #F0F0F0;
 }
 
 .box {
-  padding: 40px 55px;
-  margin: 15px 0;
+  flex-grow: 1; /* Allows each box to grow equally and fill the container */
+  padding: 40px 55px; /* Adjust padding as needed for visual appearance */
+  margin: 15px 0; /* Maintains vertical margin, consider adjusting or removing based on layout needs */
   background-color: #00AFEF;
   color: #fff;
   text-align: center;
   border: solid 1px #777;
 }
 
-.box:nth-child(2),
-.box:nth-child(4) {
-  background-color: #005270;
+.box:nth-child(even) {
+  background-color: #005270; /* Adds a different background color for even boxes */
 }

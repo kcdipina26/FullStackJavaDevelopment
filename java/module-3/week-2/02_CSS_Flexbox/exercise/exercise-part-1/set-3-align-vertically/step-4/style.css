@@ -1,18 +1,20 @@
 body {
   margin: 20px;
   padding: 0;
-  font-size: 2.5em;
+  font-size: 2.5em; /* This font size will make the content very large, consider adjusting if necessary */
 }
 
 .container {
+  display: flex; /* Establishes the container as a flex container */
+  justify-content: space-around; /* Distributes space evenly between the items and around them */
+  align-items: center; /* Vertically centers the flex items */
+  height: 500px; /* Sets the height of the container */
   background-color: #F0F0F0;
-  height: 500px;
 }
 
 .box {
-  padding: 40px 55px;
+  padding: 40px 55px; /* Adjust padding as needed for visual appearance */
   background-color: #00AFEF;
   color: #fff;
   border: solid 1px #777;
 }
-

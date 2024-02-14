@@ -1,21 +1,33 @@
 body {
   margin: 20px;
-  padding: 0
+  padding: 0;
 }
 
 header {
+  display: flex; /* Enables flexbox for direct children, i.e., logo and nav */
+  align-items: center; /* Vertically aligns the flex items (logo and nav) */
   background-color: #F0F0F0;
   padding: 20px;
 }
 
 .logo {
   width: 140px;
+  flex-shrink: 0; /* Prevents the logo from shrinking */
+}
+
+nav {
+  flex-grow: 1; /* Allows the nav to grow and take up the available space */
+  display: flex; /* Enables flexbox for the nav, affecting its direct child (ul) */
+  justify-content: center; /* Centers the nav items (ul) horizontally */
 }
 
 ul {
-  margin: 0;
-  padding: 0;
+  display: flex; /* Enables flexbox for the ul, affecting its children (li) */
+  justify-content: center; /* This will center the list items if nav has enough space */
+  flex-grow: 1;
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 li {
@@ -23,12 +35,10 @@ li {
   font-size: 20px;
   text-transform: uppercase;
   color: #707070;
-  padding: 0 20px 0 0;
-  margin-left: 20px;
+  margin-left: 20px; /* Adjusts spacing between list items */
 }
 
-a,
-a:visited {
+a, a:visited {
   color: #707070;
   text-decoration: none;
 }

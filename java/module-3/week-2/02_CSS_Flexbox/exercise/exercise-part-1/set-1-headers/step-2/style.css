@@ -1,21 +1,31 @@
 body {
   margin: 20px;
-  padding: 0
+  padding: 0;
 }
 
 header {
+  display: flex; /* Makes the header a flex container */
+  align-items: center; /* Centers the items vertically */
+  justify-content: flex-start; /* Aligns items to the start (left side) */
   background-color: #F0F0F0;
   padding: 20px;
 }
 
 .logo {
-  width: 140px;
+  width: 140px; /* Adjust size as needed */
+  /* Ensures the logo is displayed inline or as a block for proper sizing */
+}
+
+nav {
+  margin-left: 20px; /* Adds space between the logo and nav */
+  /* Additional specific styling for nav can be added here */
 }
 
 ul {
-  margin: 0;
+  display: flex; /* Aligns the list items horizontally */
+  list-style-type: none; /* Removes bullet points */
   padding: 0;
-  list-style-type: none;
+  margin: 0;
 }
 
 li {
@@ -23,12 +33,10 @@ li {
   font-size: 20px;
   text-transform: uppercase;
   color: #707070;
-  padding: 0 20px 0 0;
-  margin-left: 20px;
+  margin-left: 20px; /* Spaces out the list items */
 }
 
-a,
-a:visited {
+a, a:visited {
   color: #707070;
   text-decoration: none;
 }

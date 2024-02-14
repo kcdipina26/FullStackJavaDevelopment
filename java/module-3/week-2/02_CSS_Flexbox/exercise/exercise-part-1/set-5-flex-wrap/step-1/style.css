@@ -1,21 +1,27 @@
 body {
   margin: 20px;
   padding: 0;
-  font-size: 2.5em;
+  font-size: 2.5em; /* You may want to adjust this font size to suit your layout */
 }
 
 .container {
+  display: flex; /* Establishes the container as a flex container */
+  flex-direction: row; /* Ensures the flex items (boxes) are laid out in a row */
   background-color: #F0F0F0;
-  width: 350px;
-  padding: 20px;
-  display: flex;
 }
 
 .box {
-  padding: 40px 55px;
-  width: 30px;
+  flex-grow: 1; /* Default grow factor for all boxes */
+  padding: 40px 55px; /* Adjust padding as needed for visual appearance */
+  margin: 15px 0; /* Maintains vertical margin */
   background-color: #00AFEF;
   color: #fff;
   text-align: center;
   border: solid 1px #777;
+}
+
+/* Specific rules for boxes two and four to grow twice as much */
+.box:nth-child(2), .box:nth-child(4) {
+  flex-grow: 2; /* Makes boxes two and four grow twice as much */
+  background-color: #005270; /* Maintains the different background color for visual distinction */
 }

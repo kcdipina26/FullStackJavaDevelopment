@@ -5,6 +5,8 @@ body {
 }
 
 .bio {
+  display: flex; /* Makes .bio a flex container */
+  align-items: center; /* Vertically centers the items in the container */
   background-color: #F0F0F0;
   padding: 20px;
   margin-bottom: 20px;
@@ -15,4 +17,19 @@ body {
   width: 150px;
   border-radius: 999px;
   margin: 0 10px;
+  order: 1; /* Default order for the image */
+}
+
+.bio .about {
+  order: 2; /* Default order for the text */
+}
+
+/* Specific rule for the second .bio container to reverse the order */
+/* Assuming there are only two .bio containers */
+.bio:nth-child(2) img {
+  order: 2; /* Changes the order for the image in the second .bio container */
+}
+
+.bio:nth-child(2) .about {
+  order: 1; /* Ensures the text appears first in the second .bio container */
 }
