@@ -9,7 +9,7 @@ const groceries = ['Apples', 'Bread', 'Carrots', 'Dairy', 'Eggs', 'Fish', 'Grape
  */
 function setPageTitle() {
   const titleElement = document.getElementById('title');
-  titleElement.textContent = pageTitle;
+  titleElement.innerText = pageTitle;
 }
 
 /**
