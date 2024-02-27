@@ -35,9 +35,11 @@ function markCompleted() {
   });
 }
 
+function initialize (){
 setPageTitle();
 
 displayGroceries();
+}
 
 // Don't worry too much about what is going on here, we will cover this when we discuss events.
 document.addEventListener('DOMContentLoaded', () => {

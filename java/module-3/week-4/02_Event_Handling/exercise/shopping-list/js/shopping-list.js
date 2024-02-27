@@ -13,6 +13,13 @@ const groceries = [
   { id: 10, name: 'Tea', completed: false }
 ];
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  setPageTitle();
+  displayGroceries();
+  attachEventListeners();
+});
+
 /**
  * This function will get a reference to the title and set its text to the value
  * of the pageTitle variable that was set above.
@@ -35,4 +42,57 @@ function displayGroceries() {
     li.appendChild(checkCircle);
     ul.appendChild(li);
   });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setPageTitle();
+  displayGroceries();
+  attachEventListeners();
+});
+
+function attachEventListeners() {
+  const toggleAllBtn = document.getElementById('toggleAll');
+  toggleAllBtn.addEventListener('click', toggleAllItems);
+
+  const items = document.querySelectorAll('ul li');
+  items.forEach(item => {
+    item.addEventListener('click', markItemComplete);
+    item.addEventListener('dblclick', markItemIncomplete);
+  });
+}
+function toggleAllItems() {
+  
+  groceries.forEach(item => {
+    item.completed = allItemsIncomplete; 
+  });
+
+  const items = document.querySelectorAll('ul li');
+  items.forEach((item, index) => {
+    if (allItemsIncomplete) {
+      item.classList.add('completed');
+      item.querySelector('i').classList.add('completed');
+    } else {
+      item.classList.remove('completed');
+      item.querySelector('i').classList.remove('completed');
+    }
+  });
+
+  allItemsIncomplete = !allItemsIncomplete;
+  document.getElementById('toggleAll').innerText = allItemsIncomplete ? 'Mark All Complete' : 'Mark All Incomplete';
+}
+
+function markItemComplete(event) {
+  const target = event.target;
+  if (!target.classList.contains('completed')) {
+    target.classList.add('completed');
+    target.querySelector('i').classList.add('completed');
+  }
+}
+
+function markItemIncomplete(event) {
+  const target = event.target;
+  if (target.classList.contains('completed')) {
+    target.classList.remove('completed');
+    target.querySelector('i').classList.remove('completed');
+  }
 }
