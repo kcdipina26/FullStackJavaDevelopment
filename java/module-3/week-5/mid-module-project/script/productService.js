@@ -61,5 +61,28 @@ let productService = {
   getProducts() {
     return this.allProducts;
   },
+  
+  
+  // Search for products by name or description
+  searchProducts(searchTerm) {
+    searchTerm = searchTerm.toLowerCase();
+    return this.allProducts.filter(product => 
+      product.name.toLowerCase().includes(searchTerm) || 
+      product.description.toLowerCase().includes(searchTerm)
+    );
+  },
 
+  // Get a single product by ID
+  getProductById(productId) {
+    return this.allProducts.find(product => product.productId === productId);
+  },
+
+    // Format the price to a currency format
+    formatPrice(price) {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      }).format(price);
+    },
+  
 };
