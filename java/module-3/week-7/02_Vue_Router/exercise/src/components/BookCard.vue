@@ -1,4 +1,5 @@
 <template>
+  <router-link :to="{ name: 'book', params: { isbn: book.isbn } }" class="card-link">
   <div class="card" v-bind:class="{ read: book.read }">
     <h2 class="book-title">{{ book.title }}</h2>
     <img v-if="book.isbn" v-bind:src="'http://covers.openlibrary.org/b/isbn/' + book.isbn + '-M.jpg'" />
@@ -9,6 +10,7 @@
     </div>
     <button v-if="enableAdd" v-on:click.prevent="addToReadingList(book)">Add to Reading List</button>
   </div>
+  </router-link>
 </template>
 
 <script>
@@ -53,5 +55,8 @@ export default {
 
 .card .book-author {
   font-size: 1rem;
+}
+.card-link {
+  text-decoration: none;
 }
 </style>

@@ -131,6 +131,13 @@ export function createStore() {
       }
     },
     actions: {},
+    getters: {
+      getBookByIsbn: (state) => (isbn) => {
+        // Combining both 'books' and 'popularBooks' arrays to search across all books
+        const allBooks = [...state.books, ...state.popularBooks];
+        return allBooks.find(book => book.isbn === isbn);
+      }
+    },
     modules: {},
     // Strict should not be used in production code. It is used here as a
     // learning aid to warn you if state is modified without using a mutation.
