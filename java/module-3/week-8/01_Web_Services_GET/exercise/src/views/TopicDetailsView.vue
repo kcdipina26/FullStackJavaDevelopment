@@ -12,7 +12,7 @@
 
 <script>
 import TopicDetails from '../components/TopicDetails.vue';
-
+import { getTopic } from '../services/TopicService.js';
 export default {
   components: {
     TopicDetails
@@ -24,14 +24,22 @@ export default {
     }
   },
   methods: {
-    getTopic(id) {
-
-      // TODO - Get data from API and set `topics` property
-
+    getTopicDetails(id) {
+    // TODO - Get data from API and set `topics` property
+    getTopic(id)
+        .then(topicDetails => {
+          this.topic = topicDetails;
+          this.isLoading = false;
+        })
+        .catch(error => {
+          console.error('Failed to load topic details:', error);
+          this.isLoading = false;
+          // Handle the error, such as showing an error message
+        });
     },
   },
   created() {
-    this.getTopic(this.$route.params.topicId);
+    this.getTopicDetails(this.$route.params.topicId);
   }
 };
 </script>

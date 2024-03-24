@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { listTopics } from '../services/TopicService.js';
 import TopicList from '../components/TopicList.vue';
 
 export default {
@@ -27,7 +28,16 @@ export default {
     getTopics() {
 
       // TODO - Get data from API and set `topics` property
-
+      listTopics()
+        .then(topics => {
+          this.topics = topics;
+          this.isLoading = false;
+        })
+        .catch(error => {
+          console.error('Failed to load topics:', error);
+          // Here you can handle the error, such as showing a message to the user
+          this.isLoading = false;
+        });
     },
   },
   created() {
