@@ -11,11 +11,6 @@
       "date": "2023-05-07T09:10:43.000Z"
     },
     {
-      "id": 3,
-      "title": "Variables and Data Types",
-      "date": "2023-05-07T17:12:41.000Z"
-    },
-    {
       "id": 4,
       "title": "Conditional Statements (if-else)",
       "date": "2023-05-07T22:44:11.000Z"
@@ -99,16 +94,23 @@
       "id": 20,
       "title": "Introduction to SQL and Database Basics",
       "date": "2023-05-09T21:12:00.000Z"
+    },
+    {
+      "id": 21
+    },
+    {
+      "id": 22
+    },
+    {
+      "id": 24
+    },
+    {
+      "id": 25,
+      "title": "Zeryab Application Introduction",
+      "date": "2024-03-24T18:57:40.428Z"
     }
   ],
   "messages": [
-    {
-      "id": 1001,
-      "topicId": 1,
-      "created": "2023-04-27T12:10:02.000Z",
-      "title": "Getting Started in Programming",
-      "messageText": "Hi everyone! I'm new to programming and excited to learn. Any tips on how to get started? Which programming language should I begin with?"
-    },
     {
       "id": 1002,
       "topicId": 1,
@@ -150,20 +152,6 @@
       "created": "2023-05-07T19:35:43.000Z",
       "title": "Beginner-Friendly Python Projects",
       "messageText": "Heya! I want to practice my Python skills by working on some fun projects. \n\nCan anyone recommend some beginner-friendly project ideas that I can try? I really want to apply what I've learned so far."
-    },
-    {
-      "id": 1008,
-      "topicId": 3,
-      "created": "2023-05-07T17:12:42.000Z",
-      "title": "Understanding Data Types",
-      "messageText": "Hello! I'm a bit confused about data types. Can someone explain what data types are and how they work? Some examples would be really helpful!"
-    },
-    {
-      "id": 1009,
-      "topicId": 3,
-      "created": "2023-05-07T23:55:32.000Z",
-      "title": "Are constants variables? I'm confused",
-      "messageText": "Hi there, I'm new to programming. I understand a constant is a value that doesn't change, but I also hear constants called variables. Doesn't that contradict the meaning of a constant?"
     },
     {
       "id": 1010,
@@ -408,7 +396,7 @@
       "topicId": 2,
       "created": "2023-05-11T10:14:20.000Z",
       "title": "Re: Python vs Other Languages",
-      "messageText": "Python stands out due to its simplicity, readability, and ease of learning.\n\nAdvantages:\n- Expressive syntax that reduces code complexity.\n- Rich standard library and extensive community support.\n- Great for web development, data science, automation, and more.\n\nPersonal Choice:\n- Many choose Python as their first language due to its gentle learning curve.\n- Versatility makes it suitable for both beginners and experienced developers.\n\nRemember, each language has strengths, so choose Python if it aligns with your goals. Happy coding!"
+      "messageText": "Python stands out due to its simplicity, readability, and ease of learning.\n\nAdvantages:\n- Expressive syntax that reduces code complexity.\n- Rich standard library and extensive community support.\n- Great for web development, data science, automation, and more.\n\nPersonal Choice:\n- Many choose Python as their first language due to its gentle learning curve.\n- Versatility makes it suitable for both beginners and experienced developers.\n\nRemember, each language has strengths, so choose Python if it aligns with your goals. Happy coding! You got this!"
     },
     {
       "id": 1045,
@@ -423,20 +411,6 @@
       "created": "2023-05-12T08:05:00.000Z",
       "title": "Reading & Writing files in Python",
       "messageText": "Hi! To read data from a file in Python, you can follow these steps:\n\n1. Open the file using the 'open()' function with the file name and mode ('r' for reading).\n2. Read the file content using methods like 'read()', 'readline()', or 'readlines()'.\n3. Close the file using the 'close()' method.\n\nExample:\nwith open('file.txt', 'r') as file:\n\tdata = file.read()\n\tprint(data)\n\nRemember to handle exceptions using 'try...except' blocks to manage file-related errors.\n\nFor writing to a file, you can use 'open()' with mode 'w' (writing) or 'a' (appending) instead. Just be cautious not to overwrite existing data unless intended. \n\nTo write data to a file in Python, follow these steps:\n\n1. Open the file using the 'open()' function with the file name and mode ('w' for writing or 'a' for appending). Just be cautious not to overwrite existing data unless intended. \n2. Use 'write()' or 'writelines()' method to save data into the file.\n3. Close the file using the 'close()' method.\n\nExample:\nwith open('output.txt', 'w') as file:\n\tfile.write('Hello, this is a sample text.')\n\nMake sure to handle file operations safely and close the file after writing to save changes properly."
-    },
-    {
-      "id": 1047,
-      "topicId": 3,
-      "created": "2023-05-12T09:08:12.000Z",
-      "title": "Re: Are constants variables? I'm confused",
-      "messageText": "Hi! In programming, constants are indeed values that don't change.\n\nHowever, the term 'variable' doesn't necessarily contradict the meaning of a constant.\n\nIn some languages, we use 'constant variables' to represent unchanging values during the program's execution.\n\nIt's a way to ensure readability and maintainability. Hope this clarifies things."
-    },
-    {
-      "id": 1048,
-      "topicId": 3,
-      "created": "2023-05-12T09:12:29.000Z",
-      "title": "Re: Understanding Data Types",
-      "messageText": "Hello! In programming, data types define the type of data a variable can hold.\nData types help with memory allocation and operations on variables.\n\nCommon data types include:\n- Integers for whole numbers.\n- Floating-point numbers for decimals.\n- Strings for text.\n- Booleans for true or false values."
     },
     {
       "id": 1049,
@@ -486,6 +460,9 @@
       "created": "2023-05-14T15:44:02.000Z",
       "title": "SQL vs. NoSQL Databases",
       "messageText": "Hi, I've heard about SQL and NoSQL databases. What are the main differences between them, and when should I choose one over the other for my projects?"
+    },
+    {
+      "id": 1056
     }
   ]
 }

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import messageService from '../services/MessageService';
+import MessageService from '../services/MessageService.js';
 
 export default {
   props: {
@@ -50,11 +50,25 @@ export default {
         
         // TODO - Do an add, then navigate Home on success.
         // For errors, call handleErrorResponse
+        MessageService.create(this.editMessage)
+          .then(() => {
+            this.$router.push({ name: 'TopicDetailsView', params: { topicId: this.editMessage.topicId }});
+          })
+          .catch(error => {
+            this.handleErrorResponse(error, 'adding');
+          });
 
       } else {
         
         // TODO - Do an edit, then navigate back to Message Details on success
         // For errors, call handleErrorResponse
+        MessageService.update(this.editMessage.id, this.editMessage)
+        .then(() => {
+          this.$router.push({ name: 'MessageDetailsView', params: {topicId:this.editMessage.topicId, messageId: this.editMessage.id}})
+        }).catch(error => {
+          this.handleErrorResponse(error, 'updating');
+
+        });
 
       }
     },
