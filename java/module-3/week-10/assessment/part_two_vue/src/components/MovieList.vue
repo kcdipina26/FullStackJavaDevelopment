@@ -1,12 +1,18 @@
 <template>
   <div id="card-container">
-    {{JSON.stringify(movieList)}}
+   <movie-card v-for="movie of movieList" v-bind:key="movie.id" v-bind:movie="movie"/>
   </div>
 </template>
 
 <script>
+import MovieCard from '../components/MovieCard.vue'
 export default {
-  props: ['movieList']
+  props: ['movieList'],
+
+  components: {
+    MovieCard
+  }
+
 }
 </script>
 

@@ -24,15 +24,27 @@
 </template>
 
 <script>
+import MovieService from '../services/MovieService';
 export default {
   data() {
     return {
       // TODO - Currently using hard-coded list of genres
-      allGenres: [{"id":2201,"name":"Drama"},{"id":2202,"name":"Action"},{"id":2204,"name":"Comedy"}],
+      allGenres: [],
       titleString: "",
-      selectedGenreList: []
+      genreList: []
     };
   },
+  created(){
+    MovieService.getGenres()
+    .then(response => {
+        this.allGenres = response.data;
+      })
+      .catch((error) => {
+        this.error = `Could not get the genres list for the filter.`;
+        console.log(this.error, error.response);
+      });
+  },
+  
   methods: {
     filter() {
       this.$emit("filterValueChange", {titleString: this.titleString, genreList: this.selectedGenreList});

@@ -1,30 +1,19 @@
-<template>
-  <div id="movie-app">
-     <app-header id="app-header" /> 
-    <main id="main-content">
-      <router-view />
-    </main>
-  </div>
-</template>
 
-<script>
-import AppHeader from '@/components/AppHeader.vue'
-import '@/assets/reset.css'
-
-export default {             //requirement 1 //
-  components: {
-    AppHeader
-  },
-  name: 'App'
-}
-</script>
-
-<style>
-body {
-  background-color: #2E2E38;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-}
+    <template>
+      <header id="app-header"></header>
+          <h1>The Movie List</h1>
+    </template>
+    
+    
+    
+    <script>
+    
+    export default {
+    
+    }
+    </script>
+    
+    <style>
 
 #app-header {
   background-color: #B60220;
