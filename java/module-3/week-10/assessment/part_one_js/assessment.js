@@ -8,8 +8,22 @@
  * Example 4: filteredCount('A', []) --> 0
  */
 function filteredCount(matchStr, arr) {
+    // Initialized a counter
+    let count = 0;
 
+    // Looping through the array
+    for (let i = 0; i < arr.length; i++) {
+        // Check if the current array element exactly matches the  given matchStr
+        if (arr[i] === matchStr) {
+            // Incrementing the counter for a match
+            count++;
+        }
+    }
+
+    // Returned the final count
+    return count;
 }
+
 
 /**
  * Given a state code and an array of order objects, return a count of the orders 
@@ -18,8 +32,28 @@ function filteredCount(matchStr, arr) {
  * Order objects have properties for state, status, weight, and cost.
  */
  function inProgressOrders(stateCode, orderArray) {
+   
+        // Initialized a counter
+        let count = 0;
+    
+        // Looping through the array of orders
+        for (let i = 0; i < orderArray.length; i++) {
+            
+            
+            // Checking if the current order's state matches stateCode and the status is 'In-Progress'
 
-}
+
+            if (orderArray[i].state === stateCode && orderArray[i].status === 'In-Progress') {
+                // Incrementing the counter if both of given conditions are met
+
+                count++;
+            }
+        }
+    
+        // Returned the final count
+        return count;
+    }
+    
 
 /**
  * Given a state code and an array of order objects, identify the number of orders
@@ -37,4 +71,23 @@ function filteredCount(matchStr, arr) {
  */
 function orderVolume(stateCode, orderArray) {
 
+    //initialize //
+
+    let count = 0;
+    let totalWeight = 0;
+    let totalSales = 0;
+
+    //looping through the array of orders
+    for (let i = 0; i < orderArray.length; i++) {
+
+        //check to see if looking to add for shipped or delivered //
+        if (orderArray[i].state === stateCode && (orderArray[i].status === 'Delivered' || orderArray[i].status === 'Shipped')) {
+            count++;   //incrementing//
+            //same here adding to total weight and total sales//
+            totalWeight += orderArray[i].weight;  
+            totalSales += orderArray[i].cost;
+        }
+    }
+    //we need to make sure we returning as an object// 
+    return { count, weight: totalWeight, sales: totalSales };
 }
