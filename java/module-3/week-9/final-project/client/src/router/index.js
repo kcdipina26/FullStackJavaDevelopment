@@ -3,9 +3,13 @@ import { useStore } from 'vuex'
 
 // Import components
 import ProductsView from '../views/ProductsView.vue'
+import ProductDetailView from '../views/ProductDetailView.vue'
 import LoginView from '../views/LoginView.vue'
 import LogoutView from '../views/LogoutView.vue'
 import RegisterView from '../views/RegisterView.vue'
+import CartView from '../views/CartView.vue'
+
+
 
 
 /**
@@ -27,9 +31,20 @@ const routes = [
       name: 'products',
       component: ProductsView,
       meta: {
-        requiresAuth: false
+        requiresAuth: false,
       }
     },
+      {
+        path: '/product/:id', 
+        name: 'product-detail',
+        component: ProductDetailView,
+        meta: {
+          requiresAuth: false,
+        }
+    
+
+    },
+    
     {
       path: "/login",
       name: "login",
@@ -52,6 +67,14 @@ const routes = [
       component: RegisterView,
       meta: {
         requiresAuth: false
+      }
+    },
+    {
+      path: "/cart",
+      name: "cart",
+      component: CartView,
+      meta: {
+        requiredAuth: true
       }
     }
   ];

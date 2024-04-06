@@ -26,6 +26,7 @@
 
 <script>
 export default {
+  name: "LoadingSpinner",
   props: {
     spin: {
       type: Boolean,

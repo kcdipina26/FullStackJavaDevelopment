@@ -83,6 +83,8 @@
 <script>
 import authService from "../services/AuthService";
 
+
+
 export default {
   data() {
     return {
@@ -146,4 +148,62 @@ export default {
 </script>
 
 <style scoped>
+#register {
+  max-width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 0px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.0);
+  background-color: lightpink; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#register h1 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#fields {
+  display: grid;
+  grid-gap: 6px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: blueviolet; 
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #9acfe7;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 </style>

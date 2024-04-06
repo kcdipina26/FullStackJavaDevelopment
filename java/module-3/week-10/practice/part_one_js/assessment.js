@@ -10,6 +10,7 @@
  */
 function filteredSum(arr) {
 
+
 }
 
 /**
@@ -54,5 +55,6 @@ function yearlyBookCount(year, bookArray) {
  * }
  */
 function yearlyBookStatistics(year, bookArray) {
+    
     
 }

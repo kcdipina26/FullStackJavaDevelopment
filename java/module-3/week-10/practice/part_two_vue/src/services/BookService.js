@@ -3,15 +3,18 @@ import axios from 'axios';
 export default {
 
   getGenres() {
-    return axios.get(`/books-api/genres`);
+    return axios.get(`/api/books/genres`);
   },
 
   getBooks() {
-    return axios.get(`/books-api/books`);
+    return axios.get(`/api/books`);
   },
   
   getBookById(bookId) {
-    return axios.get(`/books-api/books/${bookId}`);
+    return axios.get(`/api/books/${bookId}`);
+  },
+  getAuthorDetails(authorId){              //requirement task5 //
+    return axios.get(`/api/books/authors/${authorId}`);
   },
 
   filterBooks(titleString, genresArray) {
@@ -36,7 +39,7 @@ export default {
     if (qs.trim() === '') {
         return this.getBooks();
     } else {
-        return axios.get(`/books-api/books?${qs}`);
+        return axios.get(`/api/books?${qs}`);
     }
   }
 

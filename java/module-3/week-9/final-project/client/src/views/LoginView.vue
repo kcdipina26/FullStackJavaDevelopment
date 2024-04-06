@@ -68,4 +68,68 @@ export default {
 
 <style scoped>
 
+
+
+#login {
+  max-width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background-color: lightpink; 
+}
+
+#login h1 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#login label {
+  display: block;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+#login input[type='text'],
+#login input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; 
+}
+
+#login button {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: blueviolet; 
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+#login button:hover {
+  background-color: #9acfe7;
+}
+
+#login hr {
+  margin-top: 56px;
+  margin-bottom: 56px;
+}
+
+#login .router-link-active {
+  color: #5cb85c;
+  text-decoration: none;
+}
+
+#footer {
+  margin-top: auto; 
+  text-align: right; 
+}
 </style>

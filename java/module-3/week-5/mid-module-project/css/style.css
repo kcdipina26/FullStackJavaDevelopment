@@ -1,128 +1,112 @@
-
-header {
-  text-align: center;
-  background-color: none;
-  padding: 5px;
-  border-radius: 10px;
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Brush Script MT', cursive;
 }
 
-/* Ensure the logo image within the header is responsive */
-header img {
-  max-width: 80%; 
-  max-height: 20%;
-  height: auto;
+#app {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "info"
+    "main"
+    "footer";
+  height: 100%;
 }
 
-/* Style the navigation bar */
-nav {
-  background-color: transparent;
-  top: fixed;
-  width: 100%;
-  font-size: 30px;
-  font-family: cursive;
-  position: fixed;
-  z-index: auto;
+#left {
+  margin-right: 100px;
+  
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
+#right {
+  
+  align-self: flex-end;
 }
 
-nav ul li {
-  margin: 20px;
+#before {
+  grid-area: info;
+  background-color: pink;
+  display: grid;
+  grid-template-areas: 
+    "h1 search"
+    "lorem lorem"; 
 }
 
-nav ul li.logout {
-  margin-left: auto;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: rgb(163, 117, 32);
-}
-
-/* Style the footer */
-footer {
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  font-family: cursive;
-  font-size: 30px;
-  color: rgb(82, 32, 163);
-  bottom: 0;
-  background-color: rgb(12, 125, 10);
-}
-
-/* Style the main content area */
 main {
-  max-height: height;
   overflow: auto;
-  padding: 20px;
+  grid-area: main;
+  background-color: pink;
 }
 
-/* Style the product cards section */
 #product-cards {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  font-family: cursive;
-  color: rgb(163, 117, 32);
+  align-items: start;
+  gap: 10px;
 }
 
-/* Style individual product cards */
 .product-card {
-  border: 1px solid gray;
-  padding: 10px;
-  margin: 10px;
-  width: auto;
-  background-color: whitesmoke;
-  box-shadow: 2px 2px 5px white;
-  text-align: center;
-}
-
-/* Ensure product images are responsive */
-.product-card img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 15px;
-}
-
-/* Style the product details (if applicable) */
-.product-details {
   display: grid;
-  grid-template-rows: 1fr 1fr auto;
   padding: 10px;
-}
-
-/* Style the cart section */
-.cart {
-  margin-top: 10px;
-  text-align: end;
-}
-
-/* Style the search bar */
-#search-bar {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
+  border-style: double; 
+  border-color: blueviolet;
+  background-color: pink;
+  border-width: 5px;
   border-radius: 5px;
+  margin: 10px 15px 10px 65px; 
+  grid-template-areas: 
+    "sku price"
+    "product-name product-name"
+    "product-image product-image";
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .product-card {
-    width: calc(50% - 20px);
-  }
+.sku {
+  grid-area: sku; 
 }
 
-/* Media query for even smaller screens */
-@media (max-width: 480px) {
-  .product-card {
-    width: 100%;
-  }
+.price {
+  grid-area: price;
+}
+
+.product-name, .action { 
+  grid-area: product-name;
+}
+
+.product-image {
+  grid-area: product-image;
+}
+
+h1 {
+  grid-area: h1;
+}
+
+input {
+  grid-area: search;
+}
+
+p {
+  grid-area: lorem;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  display: flex;
+  grid-area: nav;
+  justify-content: space-between;
+  background-color: pink;
+  border-style: solid;
+  border-color: blueviolet;
+}
+
+footer {
+  grid-area: footer;
+  border-style: solid;
+  border-color: blueviolet;
+  background-color: pink;
 }

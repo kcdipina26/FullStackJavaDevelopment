@@ -1,0 +1,138 @@
+body {
+  
+  margin: 0;
+  font-family: 'Brush Script MT', cursive;
+}
+
+#app {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "info"
+    "main"
+    "footer";
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    min-height: 100vh;
+}
+#header-nav {
+  position: relative;
+}
+
+.search-bar {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: -39.00rem; 
+}
+header {
+  grid-area: header;
+}
+
+#left {
+  margin-right: 100px;
+}
+
+#right {
+  align-self: flex-end;
+}
+
+#before {
+  grid-area: info;
+  background-color: pink;
+  display: grid;
+  grid-template-areas: 
+    "h1 search"
+    "lorem lorem"; 
+}
+
+main#main-content {
+  flex:10;
+}
+main {
+  overflow: auto;
+  grid-area: main;
+  background-color: pink;
+  min-height: auto;
+}
+
+#product-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  
+  background-color: pink;
+  border: 1px solid blueviolet;
+  padding: 1rem; /* Spacing inside the card */
+  text-align: center; /* Centering text */
+  width: 350px; /* Fixed width, adjust as needed */
+  margin-bottom: 20px; /* Space at the bottom of each card */
+  cursor: pointer; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sku, .price, .product-name {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.add-to-cart-btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: blueviolet;
+  background-color: violet;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold
+}
+
+.add-to-cart-btn:hover {
+  background-color: white;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  display: flex;
+  grid-area: nav;
+  justify-content: space-between;
+  background-color: violet;
+  border-style: solid;
+  border-color: blueviolet;
+}
+.nav-left {
+  display: flex;
+  gap: 10px; 
+}
+
+
+.nav-right {
+  
+}
+.navBarLink {
+  font-weight: bold;
+ 
+}
+
+
+
+footer {
+  grid-area: footer;
+  border-style: solid;
+  border-color: blueviolet;
+  background-color: pink;
+}

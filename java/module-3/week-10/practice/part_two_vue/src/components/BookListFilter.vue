@@ -14,7 +14,7 @@
         </select>
       </div>
       <div class="button-group">
-        <button type="submit">Filter</button>
+        <button id="submit-button" type="submit">Filter</button>
         <button v-on:click="clear">Reset</button>
       </div>
     </form>
@@ -55,6 +55,11 @@ export default {
 </script>
 
 <style scoped>
+
+#submit-button {
+  background-color: #E69C60;
+
+}
 #movie-filter {
   display: flex;
   flex-wrap: nowrap;
@@ -63,6 +68,7 @@ export default {
   margin-bottom: 2rem;
   padding: 1rem 2rem;
   width: fit-content;
+  
 }
 
 form {
@@ -71,6 +77,8 @@ form {
   gap: 2rem;
   justify-content: center;
   align-items: top;
+  background-color:#C0B387;
+  border: solid 1px;
 }
 
 .form-group {

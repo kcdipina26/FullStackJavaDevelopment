@@ -3,6 +3,7 @@ import MyApp from './App.vue'
 import { createStore } from './store'
 import router from './router'
 import axios from 'axios'
+import './global.css'
 
 /* import fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'

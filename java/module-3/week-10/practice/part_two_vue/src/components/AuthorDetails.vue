@@ -14,6 +14,19 @@
       <div class="info-property">
         <label>About:</label><p>{{author.about}}</p>
       </div>
+      <div class="info-property">                     
+        <label>Select Books:</label>
+        </div>
+        <ul>
+       <li  v-for="book of author.books" v-bind:key="book.id">
+        
+        <router-link class="book-link"    
+         v-bind:key="book.id" 
+         v-bind:to="{name: 'bookDetails', params: {bookId: book.id}}">  
+         {{ book.title }}
+             </router-link>
+    </li>
+  </ul>
     </section>
   </article>
 </template>

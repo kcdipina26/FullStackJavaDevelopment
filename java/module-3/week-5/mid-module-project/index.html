@@ -7,44 +7,50 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 </head>
+
 <body>
   <div id="app">
     <header>
-      <img src="img/Brown Cartoon Coffee Cup Free Logo (1).png" alt="SSGeek Logo">
+      <!-- Make sure the logo image source is correct -->
+      <img src="img/logo_400x70.png" alt="Your Logo" style="display: block; margin-left: auto; margin-right: auto;">
     </header>
-    
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Cart</a></li>
-        <li class="logout"><a href="#">Logout</a></li>
-      </ul>
+    <nav>
+      <div class="nav">
+        <!-- Left-aligned links -->
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Cart</a>
+      </div>
+
+      <div class="nav">
+        <!-- Right-aligned links -->
+        <div class="search-container">
+          <input id="searchbar" type="text" placeholder="Search...">
+          <button class="search-button"><i class="fa fa-search"></i></button>
+        </div>
+        <a href="#" class="nav-link logout-link">Logout</a>
+      </div>
     </nav>
-    <h1>
-      Products
-    </h1>
-    <p> Welcome to SSGeek Store. Buy something you love!</p>
+    
+    <!-- Info section for the search bar and lorem ipsum text -->
+    <section id="before">
+      <h1>Products</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </section>
+    
+    <!-- Main section for product cards -->
     <main>
       <section id="product-cards">
-        <article class="product-card">
-          <img src="path-to-image" alt="Product Image" class="product-image">
-          <div class="product-info">
-            <div class="product-name">Product Name</div>
-            <div class="product-price">Price</div>
-          </div>
-          <button class="add-to-cart-button">
-            <i class="fa-solid fa-cart-plus"></i> Add to cart
-          </button>
-        </article>
-        
+        <!-- Product cards will be inserted here via JavaScript -->
       </section>
     </main>
+    
+    <!-- Footer section -->
     <footer>
-      <p> 2024 SSGeek Store</p>
+      &copy; 2024 All rights reserved
     </footer>
-    <div id="message-window" class="hidden"></div>
   </div>
 
   <script src="script/productService.js"></script>
-  <script src="script/product.js"></script>
+  <script src="script/app.js"></script>
 </body>
 </html>
